@@ -1,0 +1,32 @@
+<div class="iniciar-projeto">
+    <div class="form-cont container">
+      <h1>Fale Conosco</h1>
+      <p>Por gentileza, preencha os campos abaixo e responderemos em breve. Agradecemos pela preferência. </p>
+      <form action="...." method="post">
+        <div class="mb-3">
+          <input type="text" name="name" class="form-control" placeholder="Nome Completo" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" name="email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="mb-3">
+          <input type="tel" name="phone" class="form-control" placeholder="Telefone">
+        </div>
+        <div class="mb-3">
+          <label for="projectDetails" class="form-label fw-medium">Como podemos te ajudar?</label>
+          <textarea name="message" class="form-control" id="projectDetails" rows="3" placeholder="Mensagem"></textarea>
+        </div>
+        <div class="mb-3">
+          <div class="form-check">
+            <label class="form-check-label fw-medium" for="privacyCheck">
+              Ao enviar, você está de acordo com as <a href="/compliance" style="color: rgb(157, 157, 157);">Políticas do Site</a>.
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-outline-light">Enviar</button>
+        <input type="hidden" name="accessKey" value="">
+        <input type="hidden" name="redirectTo" value="http://www.localhost:4200/">
+      </form>
+    </div>
+  </div>
+  

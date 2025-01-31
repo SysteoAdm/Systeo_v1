@@ -1,0 +1,25 @@
+<div class="container d-flex justify-content-center align-items-center cont-form">
+    <div class="row w-100">
+      <div class="col-12 col-md-6 col-lg-4 mx-auto">
+        <div class="card shadow-lg p-4" style="background-color: #444;">
+          <h2 class="text-center text-white mb-4">Entrar</h2>
+          <form>
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label text-white">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+            </div>
+            <!-- Senha -->
+            <div class="mb-3">
+              <label for="password" class="form-label text-white">Senha</label>
+              <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
+            </div>
+            <!-- Botão de login -->
+            <button type="submit" class="btn btn-primary w-100" [routerLink]="['/home']">Entrar</button>
+          </form>
+          <p class="text-center text-white mt-3">Não tem uma conta? <a href="#" class="text-primary">Criar uma conta</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

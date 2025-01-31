@@ -1,0 +1,62 @@
+.iniciar-projeto{
+    border-top: solid 1px rgba(214, 214, 214, 0.5);;
+    height: auto;
+    background-color: #181818;
+    /* background: rgb(147,245,236); */
+    /* background: linear-gradient(135deg, rgba(249, 249, 249, 0.5), rgba(224, 224, 224, 0.5)); */
+    /* background: linear-gradient(90deg, rgba(147,245,236,1) 0%, rgba(167,123,243,1) 100%); */
+  }
+  .form-cont{
+   padding-top: 50px;
+  }
+  
+  
+  h1{
+    font-size: 71px;
+    font-weight: bold;
+    padding: 0 0 0 0;
+    color: rgb(157, 157, 157);
+  }
+  
+  p{
+    font-size: 20px;
+    color: rgb(157, 157, 157);
+  }
+  
+  .form-control {
+    background-color: #f8f9fa; /* Cor de fundo padrão */
+    border: 2px solid transparent; /* Define a largura e oculta a cor da borda */
+    border-image: linear-gradient(119.88deg, #93F5EC 9.11%, #A77BF3 71.81%); /* Aplica o gradiente na borda */
+    border-image-slice: 1; /* Define a espessura do gradiente */
+  
+  }
+  .form-control:focus {
+    border-color: rgb(147,245,236);/* Cor da borda ao receber foco */
+    box-shadow: 0 0 0 0.05rem rgba(255, 253, 253, 0.8); /* Adiciona um efeito de foco */
+  }
+  .form-check-label{
+    color: rgb(157, 157, 157);
+  ;
+  }
+  .form-label{
+    color: rgb(157, 157, 157);
+  }
+  
+  
+  .btn-outline-light {
+    color: rgb(157, 157, 157);
+    font-weight: bold;
+    font-size: 20px;
+    width: 200px;
+    margin-bottom: 70px;
+    border-radius: none;
+    border: 4px solid transparent; /* Define a largura e oculta a cor da borda */
+    border-image: linear-gradient(119.88deg, #93F5EC 9.11%, #A77BF3 71.81%); /* Aplica o gradiente na borda */
+    border-image-slice: 1; /* Define a espessura do gradiente */
+  }
+  
+  .btn-outline-light:hover{
+    background-color: rgba(255, 253, 253, 0.2);
+    color: rgb(255, 255, 255);
+  }
+  

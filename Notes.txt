@@ -1,0 +1,20 @@
+#View:
+ng generate module views/one --route oneCursoDeNoivos --module app
+
+ng generate module views/Casados --route CasadosPraSempre --module app
+
+ng generate module views/Novidades --route Novidades --module app
+
+
+ng generate module views/EscolaBiblica --route EscolaBiblica --module app
+
+ng generate module views/CursosFamilia --route CursosDeFamilia --module app
+
+ng generate module views/FormacaoLideres --route FormacaoDeLideres --module app
+
+ng generate module views/Lancamentos --route Lancamentos --module app
+
+ng generate module views/FaleConosco --route FaleConosco --module app
+
+#Componente:
+ng g c shared/components/slideCursos1  

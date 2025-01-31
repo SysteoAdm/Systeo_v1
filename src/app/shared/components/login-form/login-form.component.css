@@ -1,0 +1,31 @@
+body {
+    background-color: #333;
+  }
+  
+  .cont-form{
+    margin-top: 50px;
+    height: 500px;
+
+  }
+  .card {
+    border-radius: 8px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .text-primary {
+    color: #007bff;
+  }
+  
+  .text-primary:hover {
+    color: #0056b3;
+  }
+  

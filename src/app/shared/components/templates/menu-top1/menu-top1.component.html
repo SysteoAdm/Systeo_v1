@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg"  data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-5" style="color: red;" href="#">
+        <img class="logo-menu" src="assets/Logo_only.webp" alt="Logo" id="logo-img">
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Início</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Cursos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" [routerLink]="['/EscolaBiblica']" routerLinkActive="router-link-active" >Escola Bíblica</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/CursosDeFamilia']">Cursos de Família</a></li>           
+              <li><a class="dropdown-item" [routerLink]="['/DesenvolvimentoPessoal']">Desenvolvimento Pessoal</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/FormacaoDeLideres']">Formação de Líderes</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" [routerLink]="['/Lancamentos']">Lançamentos</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Administração
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" [routerLink]="['/EscolaBiblica']">Alunos Matriculados</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/EscolaBiblica']">Cursos em Revisão</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/EscolaBiblica']">Novidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/FaleConosco']">Fale Conosco</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+        <button class="btn btn-outline-light mx-5 px-5" type="submit" [routerLink]="['/LoginPage']">Login</button>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,12 @@
+body {
+    margin-top: 80px;
+}
+.card{
+    border: none;
+}
+.card-text {
+    color: aliceblue;
+}
+.card-body{
+    background-color: rgb(9, 9, 9, 0.9);
+}
