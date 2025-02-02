@@ -14,7 +14,7 @@ import { SlideCursosLancamentosComponent } from './components/slide-cursos-lanca
 import { SlideCursosFormacaoLideresComponent } from './components/slide-cursos-formacao-lideres/slide-cursos-formacao-lideres.component';
 import { FaleConoscoFormComponent } from './components/fale-conosco-form/fale-conosco-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
-import { Footer1Component } from './components/footer1/footer1.component';
+import { Footer1Component } from './components/templates/footer1/footer1.component';
 
 
 @NgModule({
