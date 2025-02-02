@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg"  data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand ms-5" style="color: red;" href="#">
+      <a class="navbar-brand ms-5" style="color: red;" [routerLink]="['/home']">
         <img class="logo-menu" src="assets/Logo_only.webp" alt="Logo" id="logo-img">
       </a>
       
@@ -10,7 +10,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Início</a>
+            <a class="nav-link active" aria-current="page" [routerLink]="['/home']">Início</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
