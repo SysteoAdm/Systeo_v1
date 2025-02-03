@@ -21,7 +21,7 @@
 
     <!-- Menu de navegação -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-4">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" [routerLink]="['/home']">Início</a>
         </li>
@@ -52,6 +52,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" [routerLink]="['/FaleConosco']">Fale Conosco</a>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-outline-light d-lg-none btn-login-toggled" ><a class="nav-link active" #aToggled aria-current="page" [routerLink]="['/LoginPage']">Login</a></button>
         </li>
         </ul>
             <!-- Formulário de pesquisa -->

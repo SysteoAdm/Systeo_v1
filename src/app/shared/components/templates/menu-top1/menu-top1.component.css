@@ -43,6 +43,30 @@
 }
 
 
+.btn-login-toggled {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 35px; /* Ajusta a altura para 35px */
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    justify-content: center; /* Alinha o conteúdo horizontalmente */
+}
+
+#aToggled {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100%; /* Garante que o link ocupe toda a altura do botão */
+    display: flex;
+    align-items: center; /* Alinha o texto verticalmente */
+    justify-content: center; /* Alinha o texto horizontalmente */
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Mantém a cor do texto do botão */
+}
+
+
+
 /* # Responsividade CSS: */
 
 @media (max-width: 575.98px) {
