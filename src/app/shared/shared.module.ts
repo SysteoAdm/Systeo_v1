@@ -15,6 +15,8 @@ import { SlideCursosFormacaoLideresComponent } from './components/slide-cursos-f
 import { FaleConoscoFormComponent } from './components/fale-conosco-form/fale-conosco-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { Footer1Component } from './components/templates/footer1/footer1.component';
+import { FormsModule } from '@angular/forms';
+import { SafeUrlPipe } from '../safe-url.pipe';
 
 
 @NgModule({
@@ -31,11 +33,13 @@ import { Footer1Component } from './components/templates/footer1/footer1.compone
     SlideCursosFormacaoLideresComponent,
     FaleConoscoFormComponent,
     LoginFormComponent,
-    Footer1Component
+    Footer1Component,
+    SafeUrlPipe
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
+    FormsModule
   ],
   exports: [
     SharedComponent,
@@ -50,7 +54,8 @@ import { Footer1Component } from './components/templates/footer1/footer1.compone
     SlideCursosFormacaoLideresComponent,
     FaleConoscoFormComponent,
     LoginFormComponent,
-    Footer1Component
+    Footer1Component,
+    SafeUrlPipe
   ]
 })
 export class SharedModule { }

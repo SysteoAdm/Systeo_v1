@@ -8,6 +8,7 @@ const routes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full'
   },
+  
   { path: 'shared', loadChildren: () => import('./shared/shared.module').then(m => m.SharedModule) },
   { path: 'Novidades', loadChildren: () => import('./views/novidades/novidades.module').then(m => m.NovidadesModule) },
   { path: 'EscolaBiblica', loadChildren: () => import('./views/escola-biblica/escola-biblica.module').then(m => m.EscolaBiblicaModule) },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'Lancamentos', loadChildren: () => import('./views/lancamentos/lancamentos.module').then(m => m.LancamentosModule) },
   { path: 'FaleConosco', loadChildren: () => import('./views/fale-conosco/fale-conosco.module').then(m => m.FaleConoscoModule) },
   { path: 'LoginPage', loadChildren: () => import('./views/login-page/login-page.module').then(m => m.LoginPageModule) },
+  { path: 'searchResult', loadChildren: () => import('./views/search-bar-page/search-bar-page.module').then(m => m.SearchBarPageModule) },
 
 ];
 

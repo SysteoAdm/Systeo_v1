@@ -1,0 +1,23 @@
+<div class="container">
+    <h2 class="my-5">Resultados da Pesquisa para: "{{ searchQuery }}"</h2>
+    <div *ngIf="results.length === 0">
+      <p>Nenhum vídeo encontrado para "{{ searchQuery }}".</p>
+    </div>
+    <div class="row">
+      <div *ngFor="let result of results" class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="video-item">
+          <h3 class="fs-5">{{ result.title }}</h3>
+          <!-- Aqui usamos o pipe 'safeUrl' para transformar a URL e exibir o vídeo corretamente -->
+          <iframe 
+            width="100%" 
+            height="auto" 
+            [src]="result.url | safeUrl" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  
