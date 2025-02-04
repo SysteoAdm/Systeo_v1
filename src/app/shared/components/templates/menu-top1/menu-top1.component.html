@@ -5,14 +5,24 @@
     </a>
 
 <!-- Div para campo de pesquisa com ícone -->
+<!-- Div para campo de pesquisa com ícone -->
 <div class="search d-flex align-items-center d-lg-none ms-auto me-3">
-  <input type="text" class="form-control me-2" placeholder="Pesquisar..." [(ngModel)]="searchQuery" name="searchQuery">
-  <button class="btn btn-outline-light" (click)="searchVideos(searchQuery)">
-    <i class="bi bi-search"></i> <!-- Ícone de pesquisa do Bootstrap -->
+  <!-- O input só é exibido quando isInputVisible for true -->
+  <input 
+    *ngIf="isInputVisible"
+    type="text" 
+    class="form-control me-2" 
+    placeholder="Pesquisar..." 
+    [(ngModel)]="searchQuery" 
+    name="searchQuery"
+    [ngStyle]="{'width': isInputVisible ? '115px' : '80px'}" />
+
+  <button 
+    class="btn btn-light" 
+    (click)="onSearchOrExpand()">
+    <i class="bi bi-search"></i>
   </button>
 </div>
-
-
 
     <!-- Botão para alternar o menu em telas pequenas -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -1,3 +1,8 @@
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .navbar {
     background-color: #002FA6;
     height: 65px;
@@ -7,10 +12,15 @@
 .navbar-nav{
     background-color: #002FA6;
 }
-.container-fluid{
-    padding-left: 0;
-    padding-right: 0;
+
+/* .navbar-toggle{
+    color: #932525;
+    border: none;
 }
+
+.navbar-toggler-icon{
+    color: #932525; 
+} */
 
 .logo-menu {
     height: 40px;
@@ -18,16 +28,18 @@
 
 .search input {
     font-size: 16px;
-    color: #1E272E;
+    color: #fff;
     width: 80px; /* Largura inicial do campo */
     transition: width 0.4s ease; /* Suaviza a transição de largura */
-    padding: 0.375rem 0.75rem; /* Ajusta o padding para não interferir com a largura */
+    padding: 0.375rem 0.75rem;
+
 }
 
 .search input:focus {
-    width: 170px; /* Largura final quando o campo de pesquisa é focado */
-    outline: none; /* Remove o contorno padrão */
+    outline: none;
+    
 }
+
 
 .search input:valid {
     width: 170px;  /* Se houver texto, o input mantém o tamanho expandido */
