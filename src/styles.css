@@ -5,5 +5,11 @@
 /* #CORES OFICIAIS: */
 :root {
 --azul-intenso: #002FA6;
---azul-intenso: #EDEDED;
+--branco-gelo: #EDEDED;
+}
+
+
+/* #GRADIENTE BRANCO GELO OFICIAIL: */
+:root {
+    background: linear-gradient(to left, #EDEDED, white 50%, #EDEDED);
 }

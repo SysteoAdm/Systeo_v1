@@ -15,19 +15,19 @@
     font-size: 71px;
     font-weight: bold;
     padding: 0 0 0 0;
-    color: rgb(157, 157, 157);
+    color: var(--azul-intenso);
   }
   
   p{
     font-size: 20px;
-    color: rgb(157, 157, 157);
+    color: var(--azul-intenso);
   }
   
   .form-control {
     background-color: #f8f9fa; /* Cor de fundo padrão */
     border: 2px solid transparent; /* Define a largura e oculta a cor da borda */
-    border-image: linear-gradient(119.88deg, #93F5EC 9.11%, #A77BF3 71.81%); /* Aplica o gradiente na borda */
-    border-image-slice: 1; /* Define a espessura do gradiente */
+     /* Aplica o gradiente na borda */
+    
   
   }
   .form-control:focus {
@@ -39,7 +39,7 @@
   ;
   }
   .form-label{
-    color: rgb(157, 157, 157);
+    color: var(--azul-intenso);
   }
   
   
