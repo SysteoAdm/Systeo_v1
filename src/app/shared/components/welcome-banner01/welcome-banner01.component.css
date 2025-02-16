@@ -55,7 +55,7 @@
   }
   
   /* Estilo para fundos dos slides */
-  .slider-bg-1 {
+  /* .slider-bg-1 {
     background: linear-gradient(90deg, #ACC2FE, #BAD5F2, #E8EEEA);
   }
   
@@ -66,7 +66,7 @@
   .slider-bg-3 {
     background: linear-gradient(90deg, #F4F9E9, #DFF4D7, #CBEFBE);
   }
-  
+   */
 
 .carousel-item{
     height: 350px;
@@ -77,39 +77,94 @@
     color: #fff;
   }
   
-  .carousel-item h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-top: 50px;
-    margin-left: 30%;
+  .carousel-item h2 {
+    /* color: #184472; */
+    color: #EDEDED;
+
   }
   
   .carousel-item p {
-    font-size: 1.25rem;
+    font-size: 2rem;
     margin-top: 1rem;
-    margin-left: 30%;
+    color: #AED4F1;
   }
 
   .carousel-item .btn {
     color: white;
     padding-left: 40px;
     padding-right: 40px;
-    margin-left: 30%;
+  
   }
 
   
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .slider-img {
-      max-height: 200px;
-    }
-  
-    .carousel-item h2 {
-      font-size: 2rem;
-    }
-  
-    .carousel-item p {
-      font-size: 1rem;
-    }
+
+  /* =============================================== */
+
+  /* Responsividade para a imagem de fundo */
+.slider-bg-1 {
+  background: url('src/assets/banner_cine1_.webp') no-repeat center center;
+  background-size: cover; /* A imagem vai cobrir toda a área do slide */
+}
+.slider-bg-2 {
+  background: url('src/assets/banner_cine_3.webp') no-repeat center center;
+  background-size: cover; /* A imagem vai cobrir toda a área do slide */
+}
+.slider-bg-3 {
+  background: url('src/assets/banner_cine_2.webp') no-repeat center center;
+  background-size: cover; /* A imagem vai cobrir toda a área do slide */
+}
+
+@media (max-width: 575.98px) {
+  .slider-img {
+    max-height: 200px;
   }
   
+  .carousel-item h2 {
+    font-size: 1.5rem;
+    padding-top: 80px;
+  }
+
+  .carousel-item p {
+    
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .slider-img {
+    max-height: 200px;
+  }
+  
+  .carousel-item h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-item p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carousel-item h2{
+    padding-top: 30px;
+    font-size: 4rem;
+    font-weight: bold;
+  
+  }
+  .carousel-item p {
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-item h2{
+    padding-top: 30px;
+    font-size: 5rem;
+    font-weight: 700;
+  }
+  .carousel-item p {
+    font-weight: 500;
+  }
+  
+}

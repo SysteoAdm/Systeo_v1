@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'LoginPage', loadChildren: () => import('./views/login-page/login-page.module').then(m => m.LoginPageModule) },
   { path: 'searchResult', loadChildren: () => import('./views/search-bar-page/search-bar-page.module').then(m => m.SearchBarPageModule) },
   { path: 'TestPage', loadChildren: () => import('./views/test-page/test-page.module').then(m => m.TestPageModule) },
+  { path: 'video-player', loadChildren: () => import('./views/video-player/video-player.module').then(m => m.VideoPlayerModule) },
 
 ];
 
