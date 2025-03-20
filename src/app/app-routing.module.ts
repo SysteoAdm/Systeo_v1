@@ -8,7 +8,7 @@ const routes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full'
   },
-  
+
   { path: 'shared', loadChildren: () => import('./shared/shared.module').then(m => m.SharedModule) },
   { path: 'Novidades', loadChildren: () => import('./views/novidades/novidades.module').then(m => m.NovidadesModule) },
   { path: 'EscolaBiblica', loadChildren: () => import('./views/escola-biblica/escola-biblica.module').then(m => m.EscolaBiblicaModule) },
@@ -21,6 +21,13 @@ const routes: Routes = [
   { path: 'searchResult', loadChildren: () => import('./views/search-bar-page/search-bar-page.module').then(m => m.SearchBarPageModule) },
   { path: 'TestPage', loadChildren: () => import('./views/test-page/test-page.module').then(m => m.TestPageModule) },
   { path: 'video-player', loadChildren: () => import('./views/video-player/video-player.module').then(m => m.VideoPlayerModule) },
+  { path: 'Perfil', loadChildren: () => import('./views/perfil/perfil.module').then(m => m.PerfilModule) },
+  { path: 'Usuarios', loadChildren: () => import('./views/usuarios/usuarios.module').then(m => m.UsuariosModule) },
+  { path: 'Criar-Novo-Usuario', loadChildren: () => import('./views/criar-novo-usuario/criar-novo-usuario.module').then(m => m.CriarNovoUsuarioModule) },
+  { path: 'CurusosAvancado', loadChildren: () => import('./views/curusos-avancado/curusos-avancado.module').then(m => m.CurusosAvancadoModule) },
+
+  // Rota curinga para redirecionar qualquer rota inexistente para a home
+   { path: '**', redirectTo: '/home' }
 
 ];
 

@@ -8,17 +8,17 @@
 <!-- Div para campo de pesquisa com ícone -->
 <div class="search d-flex align-items-center d-lg-none ms-auto me-3">
   <!-- O input só é exibido quando isInputVisible for true -->
-  <input 
+  <input
     *ngIf="isInputVisible"
-    type="text" 
-    class="form-control me-2" 
-    placeholder="Pesquisar..." 
-    [(ngModel)]="searchQuery" 
+    type="text"
+    class="form-control me-2"
+    placeholder="Pesquisar..."
+    [(ngModel)]="searchQuery"
     name="searchQuery"
     [ngStyle]="{'width': isInputVisible ? '115px' : '80px'}" />
 
-  <button 
-    class="btn btn-light" 
+  <button
+    class="btn btn-light"
     (click)="onSearchOrExpand()">
     <i class="bi bi-search"></i>
   </button>
@@ -43,18 +43,9 @@
             <li><a class="dropdown-item" [routerLink]="['/EscolaBiblica']" routerLinkActive="router-link-active">Escola Bíblica</a></li>
             <li><a class="dropdown-item" [routerLink]="['/CursosDeFamilia']">Cursos de Família</a></li>
             <li><a class="dropdown-item" [routerLink]="['/DesenvolvimentoPessoal']">Desenvolvimento Pessoal</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/FormacaoDeLideres']">Formação de Líderes</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/FormacaoDeLideres']" style="color: cyan;">Formação de Líderes</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" [routerLink]="['/Lancamentos']">Lançamentos</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Administração
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" [routerLink]="['/EscolaBiblica']">Alunos Matriculados</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/EscolaBiblica']">Cursos em Revisão</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -63,8 +54,24 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" [routerLink]="['/FaleConosco']">Fale Conosco</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" [routerLink]="['/TestPage']">TestPage</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: cyan;">
+            Administração
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" [routerLink]="['/Usuarios']">Usuários</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/TestPage']">TestPage</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: goldenrod;">
+            Mais...
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" [routerLink]="['/Perfil']">Perfil</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/EscolaBiblica']">Certificados</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/LoginPage']">Sair</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <button class="btn btn-outline-light d-lg-none btn-login-toggled" ><a class="nav-link active" #aToggled aria-current="page" [routerLink]="['/LoginPage']">Login</a></button>
@@ -75,7 +82,7 @@
               <input class="form-control me-2" #searchBarInput type="search" placeholder="Pesquisar..." [(ngModel)]="searchQuery" name="searchQuery" required>
               <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
             </form>
-      
+
             <!-- Botão de login -->
             <button class="btn btn-outline-light  d-none d-lg-flex btnLogin" type="submit" [routerLink]="['/LoginPage']">Login</button>
     </div>

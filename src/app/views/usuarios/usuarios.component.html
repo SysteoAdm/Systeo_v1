@@ -1,0 +1,93 @@
+<div class="container my-5">
+  <!-- Botão Criar Novo Usuário -->
+  <div class="mb-3">
+    <button class="btn btn-primary" [routerLink]="['/Criar-Novo-Usuario']">Criar Novo Usuário</button>
+  </div>
+
+  <div class="card shadow-lg border-0">
+    <div class="card-header text-white" style="background-color: #002FA6;">
+      <h4 class="mb-0">Listagem de Usuários</h4>
+    </div>
+    <div class="card-body">
+      <!-- Filtros -->
+      <div class="row g-3 mb-3">
+        <div class="col-md-3">
+          <input type="text" class="form-control" placeholder="Pesquisar Nome" [(ngModel)]="filter.nome">
+        </div>
+        <div class="col-md-3">
+          <input type="email" class="form-control" placeholder="Pesquisar Email" [(ngModel)]="filter.email">
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control" placeholder="Pesquisar Contato" [(ngModel)]="filter.contato">
+        </div>
+        <div class="col-md-3">
+          <select class="form-select" [(ngModel)]="filter.status">
+            <option value="">Selecione</option>
+            <option value="online">Online</option>
+            <option value="offline">Offline</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col-md-3">
+          <input type="number" class="form-control" placeholder="Pesquisar Certificados" [(ngModel)]="filter.certificados">
+        </div>
+        <div class="col-md-3">
+          <input type="date" class="form-control" placeholder="Criado em" [(ngModel)]="filter.criadoEm">
+        </div>
+        <div class="col-md-3">
+          <input type="date" class="form-control" placeholder="Última Alteração" [(ngModel)]="filter.ultimaAlteracao">
+        </div>
+        <div class="col-md-3">
+          <input type="date" class="form-control" placeholder="Último Acesso" [(ngModel)]="filter.ultimoAcesso">
+        </div>
+      </div>
+
+      <div class="text-end mb-3">
+        <!-- Botão Limpar Campos -->
+        <button class="btn btn-secondary me-2" (click)="limparCampos()">Limpar Campos</button>
+        <!-- Botão Filtrar -->
+        <button class="btn btn-primary" (click)="filtrarUsuarios()">Filtrar</button>
+      </div>
+
+      <!-- Tabela -->
+      <div class="table-responsive">
+        <table class="table table-bordered text-center">
+          <thead class="text-white" style="background-color: #002FA6;">
+            <tr>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Contato</th>
+              <th>Certificados</th>
+              <th>Criado em</th>
+              <th>Última Alteração</th>
+              <th>Último Acesso</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of filteredUsers">
+              <!-- Nome com cor verde para online -->
+              <td>
+                <span [class.nome-online]="user.status === 'online'">{{ user.nome }}</span>
+              </td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.contato }}</td>
+              <td>{{ user.certificados }}</td>
+              <td>{{ user.criadoEm }}</td>
+              <td>{{ user.ultimaAlteracao }}</td>
+              <td>{{ user.ultimoAcesso }}</td>
+              <td>
+                <button class="btn btn-sm btn-info me-1" (click)="editarUsuario(user)">Editar</button>
+                <button class="btn btn-sm btn-danger me-1" (click)="excluirUsuario(user)">Excluir</button>
+                <button class="btn btn-sm btn-warning me-1" (click)="bloquearUsuario(user)">Bloquear</button>
+                <button class="btn btn-sm btn-success" (click)="desbloquearUsuario(user)">Desbloquear</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
