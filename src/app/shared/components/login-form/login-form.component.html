@@ -6,16 +6,16 @@
           <form>
             <!-- Email -->
             <div class="mb-3">
-              <label for="email" class="form-label text-white">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+              <label for="email" class="form-label text-white" >Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required [(ngModel)]="user.email">
             </div>
             <!-- Senha -->
             <div class="mb-3">
               <label for="password" class="form-label text-white">Senha</label>
-              <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
+              <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required [(ngModel)]="user.password">
             </div>
             <!-- Botão de login -->
-            <button type="submit" class="btn btn-primary w-100" [routerLink]="['/home']">Entrar</button>
+            <button type="submit" class="btn btn-primary w-100" (click)="onLogin()">Entrar</button>
           </form>
           <p class="text-center text-white mt-3">Não tem uma conta? <a href="#" class="text-primary" [routerLink]="['/Criar-Novo-Usuario']">Criar uma conta</a></p>
         </div>

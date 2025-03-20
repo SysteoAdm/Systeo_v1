@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'CurusosAvancado', loadChildren: () => import('./views/curusos-avancado/curusos-avancado.module').then(m => m.CurusosAvancadoModule) },
 
   // Rota curinga para redirecionar qualquer rota inexistente para a home
-   { path: '**', redirectTo: '/home' }
+  //  { path: '**', redirectTo: '/home' }
 
 ];
 
