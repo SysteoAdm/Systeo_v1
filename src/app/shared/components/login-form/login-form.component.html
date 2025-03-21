@@ -7,12 +7,12 @@
             <!-- Email -->
             <div class="mb-3">
               <label for="email" class="form-label text-white" >Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required [(ngModel)]="user.email">
+              <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}">
             </div>
             <!-- Senha -->
             <div class="mb-3">
               <label for="password" class="form-label text-white">Senha</label>
-              <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required [(ngModel)]="user.password">
+              <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}">
             </div>
             <!-- Botão de login -->
             <button type="submit" class="btn btn-primary w-100" (click)="onLogin()">Entrar</button>

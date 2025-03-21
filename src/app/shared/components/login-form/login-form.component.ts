@@ -38,14 +38,12 @@ onLogin() : void {
       )
       .subscribe({
         next : (response) => {
-         /*  this.dialogService.toggleVisibility();
-          this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Documento Atualizado', life: 7000 });
-          this.user = {}; */
+   
           this.authService.setToken(response.token);
           console.log('login realizado')
           this.router.navigate(['/home'])
         },
-        error: (err) =>console.log('deu ruim' ),
+        error: (err) =>console.log('Erro ao realizar o login.' ),
       })
 }
 
