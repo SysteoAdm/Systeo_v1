@@ -9,6 +9,7 @@ export class AuthService {
 
   constructor(private http : HttpClient) { }
 
+  // Saber se está usando esse código abaixo:
   register(email: string, password: string): Observable<any> {
     return this.http.post('http://localhost:5261/api/Auth/register', { email, password });
   }

@@ -1,5 +1,93 @@
 /* usuarios.component.css */
+
+/* Nome online em verde e negrito */
 .nome-online {
   color: green;
   font-weight: bold;
+}
+.funcao-admin {
+  color: #009ef9;
+  font-weight: bold;
+}
+
+/* Degradê azul nas barras de títulos da tabela */
+/* thead {
+  background: linear-gradient(to right, #009efb, #009ef9);
+} */
+
+.tabela-titulo{
+  background: linear-gradient(to right, #009efb, #009ef9);
+}
+.coluna-titulo{
+  font-size: 12px;
+  background: linear-gradient(to right, #009efb, #009ef9);
+}
+
+
+th{
+  background: rgb(221, 250, 255);
+}
+/* Linhas alternadas da tabela */
+tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+tbody tr:nth-child(odd) {
+  background-color: #f2f6fc;
+}
+
+/* Fundo externo da tabela */
+.card-body {
+  background-color: #f9fbfd;
+}
+
+/* Estilo personalizado para botões principais */
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:hover {
+  background-color: #029ff9 !important;
+  border-color: #029ff9 !important;
+  color: #fff;
+}
+
+th input,
+th select {
+  min-width: 100%;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+/* Ajuste para manter os botões alinhados */
+th button {
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+
+.col-acoes {
+  width: 140px;
+  min-width: 140px;
+  max-width: 180px;
+  white-space: nowrap;
+}
+
+@media (max-width: 992px) {
+  .table thead input,
+  .table thead select,
+  .table thead button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .table thead tr:first-child th {
+    display: block;
+  }
+
+  .table thead tr:first-child {
+    display: block;
+  }
+
+  .table thead tr:first-child th:last-child {
+    text-align: right;
+  }
 }
