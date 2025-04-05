@@ -15,6 +15,28 @@
     </div>
 
     <div class="card-body">
+      <div class="mb-3 d-flex justify-content-between flex-wrap align-items-center">
+        <div>
+          <label class="form-label me-2">Usuários por página:</label>
+          <select class="form-select form-select-sm d-inline-block w-auto" [(ngModel)]="itemsPerPage" (change)="updatePagination()">
+            <option *ngFor="let option of [5, 10, 15, 20, 30, 50, 100]" [value]="option">{{ option }}</option>
+          </select>
+        </div>
+        <nav>
+          <ul class="pagination pagination-sm mb-0">
+            <li class="page-item" [class.disabled]="currentPage === 1">
+              <button class="page-link" (click)="prevPage()">Anterior</button>
+            </li>
+            <li class="page-item disabled">
+              <span class="page-link">{{ currentPage }} / {{ totalPages }}</span>
+            </li>
+            <li class="page-item" [class.disabled]="currentPage === totalPages">
+              <button class="page-link" (click)="nextPage()">Próximo</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
       <div class="table-responsive">
         <table class="table table-bordered text-center">
           <thead>
@@ -57,70 +79,70 @@
           </thead>
 
           <tbody>
-            <tr *ngFor="let user of filteredUsers; let i = index" style="font-size: 11px;">
+            <tr *ngFor="let user of paginatedUsers(); let i = index" style="font-size: 11px;">
               <td>
-                <ng-container *ngIf="editingIndex === i; else nomeView">
-                  <input [(ngModel)]="editedUser.nome" (ngModelChange)="atualizarCampo('nome', $event)" class="form-control form-control-sm">
-                </ng-container>
-                <ng-template #nomeView>
-                  <span [class.nome-online]="user.status === 'online'">{{ user.nome }}</span>
-                </ng-template>
-              </td>
+                  <ng-container *ngIf="editingIndex === i; else nomeView">
+                    <input [(ngModel)]="editedUser.nome" (ngModelChange)="atualizarCampo('nome', $event)" class="form-control form-control-sm">
+                  </ng-container>
+                  <ng-template #nomeView>
+                    <span [class.nome-online]="user.status === 'online'">{{ user.nome }}</span>
+                  </ng-template>
+                </td>
 
-              <td>
-                <ng-container *ngIf="editingIndex === i; else funcaoView">
-                  <select class="form-select form-select-sm" [(ngModel)]="editedUser.funcao" (ngModelChange)="atualizarCampo('funcao', $event)">
-                    <option value="admin">Admin</option>
-                    <option value="aluno-pv1">Aluno PV1</option>
-                    <option value="aluno-pv2">Aluno PV2</option>
-                    <option value="aluno-pv3">Aluno PV3</option>
-                  </select>
-                </ng-container>
-                <ng-template #funcaoView>
-                  <span [class.funcao-admin]="user.funcao === 'admin'">{{ user.funcao }}</span>
-                </ng-template>
-              </td>
+                <td>
+                  <ng-container *ngIf="editingIndex === i; else funcaoView">
+                    <select class="form-select form-select-sm" [(ngModel)]="editedUser.funcao" (ngModelChange)="atualizarCampo('funcao', $event)">
+                      <option value="admin">Admin</option>
+                      <option value="aluno-pv1">Aluno PV1</option>
+                      <option value="aluno-pv2">Aluno PV2</option>
+                      <option value="aluno-pv3">Aluno PV3</option>
+                    </select>
+                  </ng-container>
+                  <ng-template #funcaoView>
+                    <span [class.funcao-admin]="user.funcao === 'admin'">{{ user.funcao }}</span>
+                  </ng-template>
+                </td>
 
-              <td>
-                <ng-container *ngIf="editingIndex === i; else emailView">
-                  <input type="email" [(ngModel)]="editedUser.email" (ngModelChange)="atualizarCampo('email', $event)" class="form-control form-control-sm">
-                </ng-container>
-                <ng-template #emailView>{{ user.email }}</ng-template>
-              </td>
+                <td>
+                  <ng-container *ngIf="editingIndex === i; else emailView">
+                    <input type="email" [(ngModel)]="editedUser.email" (ngModelChange)="atualizarCampo('email', $event)" class="form-control form-control-sm">
+                  </ng-container>
+                  <ng-template #emailView>{{ user.email }}</ng-template>
+                </td>
 
-              <td>
-                <ng-container *ngIf="editingIndex === i; else contatoView">
-                  <input [(ngModel)]="editedUser.contato" (ngModelChange)="atualizarCampo('contato', $event)" class="form-control form-control-sm">
-                </ng-container>
-                <ng-template #contatoView>{{ user.contato }}</ng-template>
-              </td>
+                <td>
+                  <ng-container *ngIf="editingIndex === i; else contatoView">
+                    <input [(ngModel)]="editedUser.contato" (ngModelChange)="atualizarCampo('contato', $event)" class="form-control form-control-sm">
+                  </ng-container>
+                  <ng-template #contatoView>{{ user.contato }}</ng-template>
+                </td>
 
-              <td>
-                <ng-container *ngIf="editingIndex === i; else certView">
-                  <input type="number" [(ngModel)]="editedUser.certificados" (ngModelChange)="atualizarCampo('certificados', $event)" class="form-control form-control-sm">
-                </ng-container>
-                <ng-template #certView>{{ user.certificados }}</ng-template>
-              </td>
+                <td>
+                  <ng-container *ngIf="editingIndex === i; else certView">
+                    <input type="number" [(ngModel)]="editedUser.certificados" (ngModelChange)="atualizarCampo('certificados', $event)" class="form-control form-control-sm">
+                  </ng-container>
+                  <ng-template #certView>{{ user.certificados }}</ng-template>
+                </td>
 
-              <td>{{ user.criadoEm }}</td>
-              <td>{{ user.ultimaAlteracao }}</td>
-              <td>{{ user.ultimoAcesso }}</td>
+                <td>{{ user.criadoEm }}</td>
+                <td>{{ user.ultimaAlteracao }}</td>
+                <td>{{ user.ultimoAcesso }}</td>
 
-              <td class="col-acoes">
-                <button
-                  class="btn btn-sm me-1"
-                  [ngClass]="editingIndex === i ? 'btn-dark' : 'btn-info'"
-                  (click)="editarUsuario(user, i)"
-                  title="Editar">
-                  <i class="bi bi-pencil"></i>
-                </button>
-                <button class="btn btn-sm btn-danger me-1" (click)="excluirUsuario(user)" title="Excluir">
-                  <i class="bi bi-trash"></i>
-                </button>
-                <button class="btn btn-sm btn-success" (click)="desbloquearUsuario(user)" title="Desbloquear">
-                  <i class="bi bi-unlock"></i>
-                </button>
-              </td>
+                <td class="col-acoes">
+                  <button
+                    class="btn btn-sm me-1"
+                    [ngClass]="editingIndex === i ? 'btn-dark' : 'btn-info'"
+                    (click)="editarUsuario(user, i)"
+                    title="Editar">
+                    <i class="bi bi-pencil"></i>
+                  </button>
+                  <button class="btn btn-sm btn-danger me-1" (click)="excluirUsuario(user)" title="Excluir">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                  <button class="btn btn-sm btn-success" (click)="desbloquearUsuario(user)" title="Desbloquear">
+                    <i class="bi bi-unlock"></i>
+                  </button>
+                </td>
             </tr>
           </tbody>
         </table>
