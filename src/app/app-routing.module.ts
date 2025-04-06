@@ -42,6 +42,7 @@ const routes: Routes = [
   { path: 'UmaNovaVida', loadChildren: () => import('./views/cursosViews/uma-nova-vida/uma-nova-vida.module').then(m => m.UmaNovaVidaModule) },
   { path: 'UmaVidaComPropositos', loadChildren: () => import('./views/cursosViews/uma-vida-com-propositos/uma-vida-com-propositos.module').then(m => m.UmaVidaComPropositosModule) },
   { path: 'Vida-E-Obra-Do-Apostolo-Paulo', loadChildren: () => import('./views/cursosViews/vida-e-obra-do-apostolo-paulo/vida-e-obra-do-apostolo-paulo.module').then(m => m.VidaEObraDoApostoloPauloModule) },
+  { path: '12-Passos-A-Luz-Das-Escrituras', loadChildren: () => import('./views/cursosViews/doze-passos-a-luz-das-escrituras/doze-passos-a-luz-das-escrituras.module').then(m => m.DozePassosALuzDasEscriturasModule) },
 
   // Rota curinga para redirecionar qualquer rota inexistente para a home
   { path: '**', redirectTo: '/home' }

@@ -1,0 +1,115 @@
+
+/* Estilo do slider */
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.clickable-image {
+  width: 341px;
+  height: 192px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.clickable-image:hover {
+  transform: scale(1.05);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.container-fluid .cont-initial {
+  background: linear-gradient(to left, #EDEDED, white 50%, #EDEDED);
+}
+
+.link-title {
+  color: #3c3c3c;
+  text-decoration: none;
+}
+
+.link-title:hover {
+  cursor: pointer;
+  color: var(--azul-intenso);
+}
+
+
+/* ========================== Estilo do Modal ========================== */
+
+/* Cabeçalho do modal */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #343a40;
+  color: white;
+  padding: 1rem;
+}
+
+.modal-dialog {
+  max-width: 100%; /* Ajuste a largura do modal para 90% da tela */
+  width: 100%;
+  height: 100vh; /* Ajusta a altura do modal para ocupar 95% da altura da tela */
+  margin: 0;
+}
+
+.modal-backdrop {
+  z-index: 1000 !important;
+  background-color: rgba(0, 0, 0, 0.9); /* Transparência 50% */
+}
+
+.modal {
+  z-index: 1060 !important; /* Garante que o modal tenha z-index maior */
+}
+
+.modal-content {
+  background-color: #343a40; /* Cor de fundo personalizada */
+  height: 100%; /* Garante que o conteúdo ocupe toda a altura do modal */
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+
+.modal-footer {
+  padding-top: 10px;
+}
+
+/* Estilos para o vídeo */
+.modal-body {
+  padding: 0;
+  flex-grow: 1; /* Flexbox para o vídeo crescer no espaço restante */
+}
+
+iframe {
+  width: 100%;
+  height: 100%; /* O vídeo ocupa 100% da altura do modal */
+  border: none;
+}
+
+/* Ícone de fechar */
+.bi-x {
+  color: white;  /* Garante que o ícone de fechamento seja branco */
+  font-size: 30px;  /* Tamanho do ícone */
+}
+
+/* ========================== Ajustes Responsivos ========================== */
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 95%; /* Ajusta a largura do modal em telas pequenas */
+  }
+
+  iframe {
+    height: 60vh; /* Ajuste da altura do vídeo para telas pequenas */
+  }
+
+  .modal-header {
+    padding: 0.5rem; /* Menor espaçamento no cabeçalho do modal em telas pequenas */
+  }
+}
