@@ -11,13 +11,14 @@ interface Usuario {
   ultimaAlteracao: string;
   ultimoAcesso: string;
 }
+
 @Component({
-  selector: 'app-usuarios',
-  templateUrl: './usuarios.component.html',
-  styleUrls: ['./usuarios.component.css']
+  selector: 'app-listagem-usuarios',
+  templateUrl: './listagem-usuarios.component.html',
+  styleUrls: ['./listagem-usuarios.component.css']
 })
 
-export class UsuariosComponent implements OnInit  {
+export class ListagemUsuariosComponent implements OnInit  {
   tabs: string[] = ['Usuários', 'Alocar Curso', 'Progresso', 'Ficha', 'Outro 1', 'Outro 2', 'Outro 3'];
   activeTab: string = 'Usuários';
 

@@ -37,11 +37,11 @@
   background-color: #001F70;
 }
 
-.password-btn {
-  background-color: #A60000;
+.SalvarTudo-btn {
+  background-color: #1cb2e8;
   border: none;
 }
 
-.password-btn:hover {
-  background-color: #700000;
+.SalvarTudo-btn:hover {
+  background-color: #1ba6d8;
 }

@@ -22,6 +22,8 @@ import { SliderCursosImg02Component } from './components/slider-cursos-img02/sli
 import { SliderCursosImg03Component } from './components/slider-cursos-img03/slider-cursos-img03.component';
 import { SliderCursosImg04Component } from './components/slider-cursos-img04/slider-cursos-img04.component';
 import { SliderCursosImg05Component } from './components/slider-cursos-img05/slider-cursos-img05.component';
+import { ListagemUsuariosComponent } from './components/listagem-usuarios/listagem-usuarios.component';
+import { AlocaCursosComponent } from './components/aloca-cursos/aloca-cursos.component';
 
 
 
@@ -45,13 +47,15 @@ import { SliderCursosImg05Component } from './components/slider-cursos-img05/sli
     SliderCursosImg02Component,
     SliderCursosImg03Component,
     SliderCursosImg04Component,
-    SliderCursosImg05Component
+    SliderCursosImg05Component,
+    ListagemUsuariosComponent,
+    AlocaCursosComponent
   ],
   imports: [
     CommonModule,
     SharedRoutingModule,
     FormsModule,
-    
+
   ],
   exports: [
     SharedComponent,
@@ -72,7 +76,9 @@ import { SliderCursosImg05Component } from './components/slider-cursos-img05/sli
     SliderCursosImg02Component,
     SliderCursosImg03Component,
     SliderCursosImg04Component,
-    SliderCursosImg05Component
+    SliderCursosImg05Component,
+    ListagemUsuariosComponent,
+    AlocaCursosComponent
   ]
 })
 export class SharedModule { }

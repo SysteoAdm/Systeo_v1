@@ -1,152 +1,45 @@
 <div class="container my-5">
-  <div class="mb-3 d-flex justify-content-between flex-wrap gap-2">
-    <button class="btn btn-primary" [routerLink]="['/Criar-Novo-Usuario']">
-      <i class="bi bi-person-plus-fill me-1"></i> Criar Usuário
-    </button>
 
-    <button *ngIf="hasChanges" class="btn btn-success" (click)="salvarEdicao()">
-      <i class="bi bi-check2-circle me-1"></i> Salvar
+  <!-- ========================= tabs ========================: -->
+  <div class="tabs">
+    <button *ngFor="let tab of tabs" (click)="activeTab = tab" [class.active]="activeTab === tab">
+      {{ tab }}
     </button>
   </div>
 
-  <div class="card shadow-lg border-0">
-    <div class="card-header text-white tabela-titulo">
-      <h4 class="mb-0 tabela-titulo">Listagem de Usuários</h4>
+  <div class="tab-content">
+    <div *ngIf="activeTab === 'Usuários'">
+      <app-listagem-usuarios></app-listagem-usuarios>
     </div>
 
-    <div class="card-body">
-      <div class="mb-3 d-flex justify-content-between flex-wrap align-items-center">
-        <div>
-          <label class="form-label me-2">Usuários por página:</label>
-          <select class="form-select form-select-sm d-inline-block w-auto" [(ngModel)]="itemsPerPage" (change)="updatePagination()">
-            <option *ngFor="let option of [5, 10, 15, 20, 30, 50, 100]" [value]="option">{{ option }}</option>
-          </select>
-        </div>
-        <nav>
-          <ul class="pagination pagination-sm mb-0">
-            <li class="page-item" [class.disabled]="currentPage === 1">
-              <button class="page-link" (click)="prevPage()">Anterior</button>
-            </li>
-            <li class="page-item disabled">
-              <span class="page-link">{{ currentPage }} / {{ totalPages }}</span>
-            </li>
-            <li class="page-item" [class.disabled]="currentPage === totalPages">
-              <button class="page-link" (click)="nextPage()">Próximo</button>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <div *ngIf="activeTab === 'Alocar Curso'">
+      <app-aloca-cursos></app-aloca-cursos>
+    </div>
 
-      <div class="table-responsive">
-        <table class="table table-bordered text-center">
-          <thead>
-            <!-- Linha de filtros -->
-            <tr>
-              <th><input type="text" class="form-control form-control-sm" placeholder="Nome" [(ngModel)]="filter.nome"></th>
-              <th>
-                <select class="form-select form-select-sm" [(ngModel)]="filter.funcao">
-                  <option value="">Função</option>
-                  <option value="admin">Admin</option>
-                  <option value="aluno-pv1">Aluno PV1</option>
-                  <option value="aluno-pv2">Aluno PV2</option>
-                  <option value="aluno-pv3">Aluno PV3</option>
-                </select>
-              </th>
-              <th><input type="email" class="form-control form-control-sm" placeholder="Email" [(ngModel)]="filter.email"></th>
-              <th><input type="text" class="form-control form-control-sm" placeholder="Contato" [(ngModel)]="filter.contato"></th>
-              <th><input type="number" class="form-control form-control-sm" placeholder="Certificados" [(ngModel)]="filter.certificados"></th>
-              <th><input type="date" class="form-control form-control-sm" [(ngModel)]="filter.criadoEm"></th>
-              <th><input type="date" class="form-control form-control-sm" [(ngModel)]="filter.ultimaAlteracao"></th>
-              <th><input type="date" class="form-control form-control-sm" [(ngModel)]="filter.ultimoAcesso"></th>
-              <th class="col-acoes text-nowrap">
-                <button class="btn btn-sm btn-secondary me-1 mb-1" (click)="limparCampos()">Limpar</button>
-                <button class="btn btn-sm btn-primary mb-1" (click)="filtrarUsuarios()">Filtrar</button>
-              </th>
-            </tr>
+    <div *ngIf="activeTab === 'Progresso'">
+      <h2>Progresso</h2>
+      <p>Conteúdo de progresso aqui.</p>
+    </div>
 
-            <!-- Títulos da tabela -->
-            <tr class="text-white coluna-titulo">
-              <th>Nome</th>
-              <th class="px-5">Função</th>
-              <th>Email</th>
-              <th>Contato</th>
-              <th>Certificados</th>
-              <th>Criado em</th>
-              <th>Alteração</th>
-              <th>Acesso</th>
-              <th class="col-acoes">Ações</th>
-            </tr>
-          </thead>
+    <div *ngIf="activeTab === 'Ficha'">
+      <h2>Ficha</h2>
+      <p>Conteúdo da ficha aqui.</p>
+    </div>
 
-          <tbody>
-            <tr *ngFor="let user of paginatedUsers(); let i = index" style="font-size: 11px;">
-              <td>
-                  <ng-container *ngIf="editingIndex === i; else nomeView">
-                    <input [(ngModel)]="editedUser.nome" (ngModelChange)="atualizarCampo('nome', $event)" class="form-control form-control-sm">
-                  </ng-container>
-                  <ng-template #nomeView>
-                    <span [class.nome-online]="user.status === 'online'">{{ user.nome }}</span>
-                  </ng-template>
-                </td>
+    <div *ngIf="activeTab === 'Outro 1'">
+      <h2>Outro 1</h2>
+      <p>Conteúdo outro 1.</p>
+    </div>
 
-                <td>
-                  <ng-container *ngIf="editingIndex === i; else funcaoView">
-                    <select class="form-select form-select-sm" [(ngModel)]="editedUser.funcao" (ngModelChange)="atualizarCampo('funcao', $event)">
-                      <option value="admin">Admin</option>
-                      <option value="aluno-pv1">Aluno PV1</option>
-                      <option value="aluno-pv2">Aluno PV2</option>
-                      <option value="aluno-pv3">Aluno PV3</option>
-                    </select>
-                  </ng-container>
-                  <ng-template #funcaoView>
-                    <span [class.funcao-admin]="user.funcao === 'admin'">{{ user.funcao }}</span>
-                  </ng-template>
-                </td>
+    <div *ngIf="activeTab === 'Outro 2'">
+      <h2>Outro 2</h2>
+      <p>Conteúdo outro 2.</p>
+    </div>
 
-                <td>
-                  <ng-container *ngIf="editingIndex === i; else emailView">
-                    <input type="email" [(ngModel)]="editedUser.email" (ngModelChange)="atualizarCampo('email', $event)" class="form-control form-control-sm">
-                  </ng-container>
-                  <ng-template #emailView>{{ user.email }}</ng-template>
-                </td>
-
-                <td>
-                  <ng-container *ngIf="editingIndex === i; else contatoView">
-                    <input [(ngModel)]="editedUser.contato" (ngModelChange)="atualizarCampo('contato', $event)" class="form-control form-control-sm">
-                  </ng-container>
-                  <ng-template #contatoView>{{ user.contato }}</ng-template>
-                </td>
-
-                <td>
-                  <ng-container *ngIf="editingIndex === i; else certView">
-                    <input type="number" [(ngModel)]="editedUser.certificados" (ngModelChange)="atualizarCampo('certificados', $event)" class="form-control form-control-sm">
-                  </ng-container>
-                  <ng-template #certView>{{ user.certificados }}</ng-template>
-                </td>
-
-                <td>{{ user.criadoEm }}</td>
-                <td>{{ user.ultimaAlteracao }}</td>
-                <td>{{ user.ultimoAcesso }}</td>
-
-                <td class="col-acoes">
-                  <button
-                    class="btn btn-sm me-1"
-                    [ngClass]="editingIndex === i ? 'btn-dark' : 'btn-info'"
-                    (click)="editarUsuario(user, i)"
-                    title="Editar">
-                    <i class="bi bi-pencil"></i>
-                  </button>
-                  <button class="btn btn-sm btn-danger me-1" (click)="excluirUsuario(user)" title="Excluir">
-                    <i class="bi bi-trash"></i>
-                  </button>
-                  <button class="btn btn-sm btn-success" (click)="desbloquearUsuario(user)" title="Desbloquear">
-                    <i class="bi bi-unlock"></i>
-                  </button>
-                </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div *ngIf="activeTab === 'Outro 3'">
+      <h2>Outro 3</h2>
+      <p>Conteúdo outro 3.</p>
     </div>
   </div>
+
 </div>

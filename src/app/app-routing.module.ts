@@ -25,6 +25,7 @@ const routes: Routes = [
   { path: 'Usuarios', loadChildren: () => import('./views/usuarios/usuarios.module').then(m => m.UsuariosModule) },
   { path: 'Criar-Novo-Usuario', loadChildren: () => import('./views/criar-novo-usuario/criar-novo-usuario.module').then(m => m.CriarNovoUsuarioModule) },
   { path: 'CurusosAvancado', loadChildren: () => import('./views/curusos-avancado/curusos-avancado.module').then(m => m.CurusosAvancadoModule) },
+  { path: 'perfilGerenciavel', loadChildren: () => import('./views/perfil-gerenciavel/perfil-gerenciavel.module').then(m => m.PerfilGerenciavelModule) },
 
   // Rota curinga para redirecionar qualquer rota inexistente para a home
   //  { path: '**', redirectTo: '/home' }
