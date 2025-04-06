@@ -110,10 +110,19 @@ export const USUARIOS: Usuario[] = [
     statusCivil: 'Casado',
     cursosMatriculados: [
       {
-        nome: 'Liderança 1',
+        nome: 'Membresia',
         statusCurso: 'formado',
         conformidade: 'Obrigatório',
         requisito: 'Nenhum',
+        inicio: '2024-01-01',
+        conclusao: '2024-03-01',
+        tempoMinimo: '60 dias'
+      },
+      {
+        nome: 'Liderança 1',
+        statusCurso: 'formado',
+        conformidade: 'Obrigatório',
+        requisito: 'Ser Membro',
         inicio: '2023-10-01',
         conclusao: '2024-01-01',
         tempoMinimo: '60 dias'
@@ -182,15 +191,6 @@ export const USUARIOS: Usuario[] = [
         conclusao: '',
         tempoMinimo: '60 dias'
       },
-      {
-        nome: 'Evangelismo',
-        statusCurso: 'pendente',
-        conformidade: 'Facultativo',
-        requisito: 'Ser Membro',
-        inicio: '',
-        conclusao: '',
-        tempoMinimo: '180 dias'
-      }
     ]
   }
 ];

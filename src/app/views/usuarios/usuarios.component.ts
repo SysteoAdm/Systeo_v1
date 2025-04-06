@@ -18,7 +18,7 @@ interface Usuario {
 })
 
 export class UsuariosComponent implements OnInit  {
-  tabs: string[] = ['Usuários', 'Alocar Curso', 'Progresso', 'Ficha', 'Outro 1', 'Outro 2', 'Outro 3'];
+  tabs: string[] = ['Usuários', 'Alocar Curso', ];
   activeTab: string = 'Usuários';
 
 

@@ -19,7 +19,7 @@
 }
 
 .navbar-toggler-icon{
-    color: #932525; 
+    color: #932525;
 } */
 
 .logo-menu {
@@ -37,7 +37,7 @@
 
 .search input:focus {
     outline: none;
-    
+
 }
 
 
@@ -72,7 +72,11 @@
     text-decoration: none; /* Remove o sublinhado do link */
     color: inherit; /* Mantém a cor do texto do botão */
 }
-
+.ativo {
+  font-weight: bold;
+  color: #0d6efd;
+  border-bottom: 2px solid #0d6efd;
+}
 
 
 /* # Responsividade CSS: */
@@ -84,7 +88,7 @@
         margin-left: 20px;
     }
     .navbar-toggler{
-     margin-right: 15px;   
+     margin-right: 15px;
     }
     #searchBarInput{
         margin-right: 0;
@@ -92,14 +96,14 @@
     }
 }
 
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
     .logo-menu{
         height: auto;
         width: 100px;
         margin-left: 20px;
     }
     .navbar-toggler{
-     margin-right: 15px;   
+     margin-right: 15px;
     }
     #searchBarInput{
         margin-right: 0;
@@ -107,33 +111,33 @@
     }
  }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     .logo-menu{
         width: 120px;
         margin-left: 60px;
-        
+
     }
  }
-  
+
 @media (min-width: 992px) {
     .searchBar{
         width: 150px;
         padding-right: 10px;
     }
-    
+
     .btnLogin{
         margin-right: 60px;
     }
-    
+
   }
-  
-@media (min-width: 1200px){ 
+
+@media (min-width: 1200px){
     .searchBar{
         width: auto
     }
-    
+
  }
-    
+
 @media (min-width: 1400px){  }
 
 @media (min-width: 1650px){  }
