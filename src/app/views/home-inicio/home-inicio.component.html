@@ -1,0 +1,68 @@
+<app-menu-top-landing></app-menu-top-landing>
+
+<section class="section-curso container-fluid py-5">
+  <div class="row align-items-center mx-5">
+    <!-- Coluna Esquerda: Texto -->
+    <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+      <h1 class="title-main">Cursos <span class="text-gradient">Imersivos</span><br><span class="title-sub">Bíblicos Online</span></h1>
+      <p class="descricao">
+        Domine as <strong>tecnologias mais transformadoras</strong> da atualidade, acelere sua carreira e aproveite as melhores oportunidades da sua área.
+      </p>
+
+      <div class="row text-center g-3 mt-4">
+        <div class="col-6 col-md-4 info-box">
+          <i class="bi bi-camera-video-fill"></i>
+          <p><strong>100% ao vivo</strong><br>Aulas</p>
+        </div>
+        <div class="col-6 col-md-4 info-box">
+          <i class="bi bi-people-fill"></i>
+          <p><strong>Turmas</strong><br>limitadas</p>
+        </div>
+        <div class="col-6 col-md-4 info-box">
+          <i class="bi bi-person-badge-fill"></i>
+          <p><strong>Professores</strong><br>especialistas</p>
+        </div>
+        <div class="col-6 col-md-4 info-box">
+          <i class="bi bi-patch-check-fill"></i>
+          <p><strong>Certificado</strong><br>reconhecido</p>
+        </div>
+        <div class="col-6 col-md-4 info-box">
+          <i class="bi bi-clock-history"></i>
+          <p><strong>100h</strong><br>de conteúdo</p>
+        </div>
+        <div class="col-6 col-md-4 info-box">
+          <i class="bi bi-cpu-fill"></i>
+          <p><strong>Acesso à</strong><br>Alura PRO</p>
+        </div>
+      </div>
+
+      <button class="cta-btn mt-4">Criar sua conta agora!</button>
+    </div>
+
+    <!-- Coluna Direita: Imagem -->
+    <div class="col-lg-6 text-center">
+      <div class="img-frame mx-auto">
+        <img
+          src="https://picsum.photos/id/1027/600/500"
+          class="img-fluid rounded"
+          alt="Estudante"
+          style="width: 100%; max-width: 500px; height: auto;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-cards py-5">
+  <div class="container">
+    <div class="card-grid">
+      <div class="custom-card text-center" *ngFor="let card of cards">
+        <div class="icon mb-2">
+          <i [class]="card.icon"></i>
+        </div>
+        <h5 class="card-title mb-1">{{ card.title }}</h5>
+        <p class="card-text">{{ card.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

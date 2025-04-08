@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+
+    <!-- Logo -->
+    <a class="navbar-brand" [routerLink]="['/homeEscolaDigital']">
+      <img class="logo-menu" src="assets/Logo_only.webp" alt="Logo" id="logo-img">
+    </a>
+
+    <!-- Inputs e botões em telas grandes -->
+    <div class="d-none d-lg-flex align-items-center ms-auto">
+      <input type="email" class="form-control me-2" placeholder="E-mail aqui..." aria-label="Email" style="min-width: 180px;">
+      <input type="password" class="form-control me-2" placeholder="Senha aqui..." aria-label="Senha" style="min-width: 180px;">
+
+      <!-- Botão Login -->
+      <button class="btn btn-outline-light me-2" type="submit" [routerLink]="['/LoginPage']">Login</button>
+
+      <!-- Botão Criar Conta -->
+      <button class="btn btn-success me-3 white-nowrap" type="button" [routerLink]="['/Criar-Novo-Usuario']">Criar Conta</button>
+    </div>
+
+    <!-- Em telas pequenas: botão Acessar à direita -->
+    <div class="d-flex d-lg-none ms-auto">
+      <button class="btn btn-outline-light me-5" type="button" [routerLink]="['/LoginPage']">Acessar</button>
+    </div>
+  </div>
+</nav>

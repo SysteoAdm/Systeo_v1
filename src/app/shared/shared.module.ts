@@ -26,6 +26,7 @@ import { ListagemUsuariosComponent } from './components/listagem-usuarios/listag
 import { AlocaCursosComponent } from './components/aloca-cursos/aloca-cursos.component';
 import { SlideCursoAdolescentesComponent } from './components/slide-curso-adolescentes/slide-curso-adolescentes.component';
 import { SlideCursoADoutrinaDoEspiritoSantoComponent } from './components/slide-curso-a-doutrina-do-espirito-santo/slide-curso-a-doutrina-do-espirito-santo.component';
+import { MenuTopLandingComponent } from './components/templates/menu-top-landing/menu-top-landing.component';
 
 
 
@@ -53,7 +54,8 @@ import { SlideCursoADoutrinaDoEspiritoSantoComponent } from './components/slide-
     ListagemUsuariosComponent,
     AlocaCursosComponent,
     SlideCursoAdolescentesComponent,
-    SlideCursoADoutrinaDoEspiritoSantoComponent
+    SlideCursoADoutrinaDoEspiritoSantoComponent,
+    MenuTopLandingComponent
   ],
   imports: [
     CommonModule,
@@ -84,7 +86,8 @@ import { SlideCursoADoutrinaDoEspiritoSantoComponent } from './components/slide-
     ListagemUsuariosComponent,
     AlocaCursosComponent,
     SlideCursoAdolescentesComponent,
-    SlideCursoADoutrinaDoEspiritoSantoComponent
+    SlideCursoADoutrinaDoEspiritoSantoComponent,
+    MenuTopLandingComponent
   ]
 })
 export class SharedModule { }

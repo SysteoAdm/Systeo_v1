@@ -15,7 +15,7 @@
               <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}">
             </div>
             <!-- Botão de login -->
-            <button type="submit" class="btn btn-primary w-100" (click)="onLogin()">Entrar</button>
+            <button type="submit" class="btn btn-primary w-100 btn-entrar" (click)="onLogin()">Entrar</button>
           </form>
           <p class="text-center text-white mt-3">Não tem uma conta? <a href="#" class="text-primary" [routerLink]="['/Criar-Novo-Usuario']">Criar uma conta</a></p>
         </div>

@@ -40,6 +40,7 @@ body {
 }
 
 .save-btn:hover {
+  font-weight: 500;
   background-color: #04477e;
 }
 
@@ -49,5 +50,6 @@ body {
 }
 
 .password-btn:hover {
+  font-weight: 500;
   background-color: #700000;
 }

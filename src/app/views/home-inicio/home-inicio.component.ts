@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-adolescentes',
-  templateUrl: './adolescentes.component.html',
-  styleUrls: ['./adolescentes.component.css']
+  selector: 'app-home-inicio',
+  templateUrl: './home-inicio.component.html',
+  styleUrls: ['./home-inicio.component.css']
 })
-export class AdolescentesComponent {
-  returnRoute = '/adolescentes'; // Define a rota de retorno
-
+export class HomeInicioComponent {
   cards = [
     {
       icon: 'bi bi-lightning-fill',
@@ -60,5 +58,4 @@ export class AdolescentesComponent {
       description: 'Proteção e confiabilidade em todos os níveis.'
     }
   ];
-
 }
