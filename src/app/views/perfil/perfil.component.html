@@ -1,146 +1,199 @@
-<div class="container d-flex justify-content-center my-5">
-  <div class="card p-4 shadow-lg w-100 profile-card">
-    <h3 class="text-center">Perfil do Usuário</h3>
-
-    <form>
-      <!-- Foto do Usuário -->
-      <div class="text-center mb-3">
-        <img src="https://via.placeholder.com/120" alt="Foto do usuário" class="rounded-circle img-thumbnail profile-img">
-        <input type="file" class="form-control mt-2 profile-upload" accept="image/*">
-      </div>
-
-      <!-- Dados Pessoais -->
-      <h5 class="fw-bold mt-3">Dados Pessoais</h5>
-      <div class="row">
-        <div class="col-md-6">
-          <label class="form-label">Nome:</label>
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">CPF:</label>
-          <input type="text" class="form-control">
-        </div>
-      </div>
-
-      <div class="row mt-2">
-        <div class="col-md-6">
-          <label class="form-label">E-mail:</label>
-          <input type="email" class="form-control">
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Celular:</label>
-          <input type="text" class="form-control">
-        </div>
-      </div>
-
-      <div class="row mt-2">
-        <div class="col-md-6">
-          <label class="form-label">Profissão:</label>
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Data de Nascimento:</label>
-          <input type="date" class="form-control">
-        </div>
-      </div>
-
-      <div class="row mt-2">
-        <div class="col-md-6">
-          <label class="form-label">Sexo:</label>
-          <select class="form-control">
-            <option>Masculino</option>
-            <option>Feminino</option>
-          </select>
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">CEP:</label>
-          <input type="text" class="form-control">
-        </div>
-      </div>
-
-      <div class="row mt-2">
-        <div class="col-md-6">
-          <label class="form-label">Estado:</label>
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Cidade:</label>
-          <input type="text" class="form-control">
-        </div>
-      </div>
-
-      <div class="row mt-2">
-        <div class="col-md-6">
-          <label class="form-label">Bairro:</label>
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Rua:</label>
-          <input type="text" class="form-control">
-        </div>
-      </div>
-
-      <div class="row mt-2">
-        <div class="col-md-6">
-          <label class="form-label">Número:</label>
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Complemento:</label>
-          <input type="text" class="form-control">
-        </div>
-      </div>
-
-      <!-- Dados de Batismo -->
-      <h5 class="fw-bold mt-4">Dados de Batismo</h5>
-      <div class="row">
-        <div class="col-md-6">
-          <label class="form-label">Data de Batismo:</label>
-          <input type="date" class="form-control">
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Cidade de Batismo:</label>
-          <input type="text" class="form-control">
-        </div>
-      </div>
-
-      <div class="row mt-2">
-        <div class="col-md-6">
-          <label class="form-label">Igreja de Batismo:</label>
-          <input type="text" class="form-control">
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">Pastor de Batismo:</label>
-          <input type="text" class="form-control">
-        </div>
-      </div>
-
-      <!-- Botão Salvar -->
-      <div class="text-center mt-4">
-        <button type="button" class="btn btn-primary w-100 save-btn">Salvar</button>
-      </div>
-
-      <!-- Alteração de Senha -->
-      <h5 class="fw-bold mt-4">Alterar Senha</h5>
-      <div class="mb-2">
-        <label class="form-label">Sua senha atual:</label>
-        <input type="password" class="form-control">
-      </div>
-
-      <div class="mb-2">
-        <label class="form-label">Nova Senha:</label>
-        <input type="password" class="form-control">
-      </div>
-
-      <div class="mb-2">
-        <label class="form-label">Confirmar Nova Senha:</label>
-        <input type="password" class="form-control">
-      </div>
-
-      <!-- Botão Trocar Senha -->
-      <div class="text-center mt-3">
-        <button type="button" class="btn btn-danger w-100 password-btn">Trocar Senha</button>
-      </div>
-    </form>
+<body class="py-5">
+  <div class="col-12 d-flex justify-content-center pt-5">
+    <img src="assets/Logo_only.webp" alt="Logo" class="img-fluid" style="max-width: 250px;">
   </div>
-</div>
+
+  <div class="container d-flex justify-content-center my-5">
+    <div class="card p-4 shadow-lg w-100 profile-card text-white" style="background-color: #001F70;">
+      <h3 class="text-center">Perfil</h3>
+      <p class="text-center">Aqui estão seus dados de cadastro.</p>
+      <hr class="" style="border: none; border-top: 2px solid #ccc;">
+
+      <form>
+        <h5 class="fw-bold mt-3">Dados Pessoais</h5>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="form-label">Nome:</label>
+            <input type="text" class="form-control"  name="nome">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">CPF:</label>
+            <input type="text" class="form-control"  name="cpf">
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <label class="form-label">E-mail:</label>
+            <input type="email" class="form-control"  name="email">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Confirmar E-mail:</label>
+            <input type="email" class="form-control"  name="email">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Celular:</label>
+            <input type="text" class="form-control"  name="celular">
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <label class="form-label">Profissão:</label>
+            <input type="text" class="form-control"  name="profissao">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Data de Nascimento:</label>
+            <input type="date" class="form-control"  name="dataNascimento">
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <label class="form-label">Sexo:</label>
+            <select class="form-control"  name="sexo">
+              <option value="">Selecione</option>
+              <option>Masculino</option>
+              <option>Feminino</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Status Civil:</label>
+            <select class="form-control"  name="estadoCivil">
+              <option value="">Selecione</option>
+              <option>Solteiro(a)</option>
+              <option>Noivo(a)</option>
+              <option>Casado(a)</option>
+              <option>Divorciado(a)</option>
+              <option>Viúvo(a)</option>
+            </select>
+          </div>
+          <div class="col-md-6 mt-3">
+            <label class="form-label">CEP:</label>
+            <input type="text" class="form-control"  name="cep">
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <label class="form-label">Estado:</label>
+            <input type="text" class="form-control"  name="estado">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Cidade:</label>
+            <input type="text" class="form-control"  name="cidade">
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <label class="form-label">Bairro:</label>
+            <input type="text" class="form-control"  name="bairro">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Rua:</label>
+            <input type="text" class="form-control"  name="rua">
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <label class="form-label">Número:</label>
+            <input type="text" class="form-control"  name="numero">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Complemento:</label>
+            <input type="text" class="form-control"  name="complemento">
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <label class="form-label">Você se considera:</label>
+            <select class="form-control" >
+              <option value="">Selecione</option>
+              <option value="sim">Cristão</option>
+              <option value="nao">Outro</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Você é mebro da Igreja do Recreio?</label>
+            <select class="form-control" >
+              <option value="">Selecione</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
+        </div>
+        <!-- Se é batizado -->
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <label class="form-label">Você é batizado?</label>
+            <select class="form-control">
+              <option value="">Selecione</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
+        </div>
+        <!-- Campos de Batismo -->
+        <div>
+          <h5 class="fw-bold mt-4">Dados de Batismo</h5>
+          <div class="row">
+            <div class="col-md-6">
+              <label class="form-label">Data de Batismo:</label>
+              <input type="date" class="form-control" name="dataBatismo">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Cidade de Batismo:</label>
+              <input type="text" class="form-control"  name="cidadeBatismo">
+            </div>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col-md-6">
+              <label class="form-label">Igreja de Batismo:</label>
+              <input type="text" class="form-control"  name="igrejaBatismo">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Pastor de Batismo:</label>
+              <input type="text" class="form-control"  name="pastorBatismo">
+            </div>
+          </div>
+        </div>
+
+        <h5 class="fw-bold mt-4">Alterar Senha</h5>
+        <div class="mb-2">
+          <label class="form-label">Senha Atual:</label>
+          <input type="password" class="form-control"  name="senha">
+        </div>
+        <div class="mb-2">
+          <label class="form-label">Nova Senha:</label>
+          <input type="password" class="form-control"  name="senha">
+        </div>
+
+        <div class="mb-2">
+          <label class="form-label">Confirmar Nova Senha:</label>
+          <input type="password" class="form-control"  name="confirmarSenha">
+        </div>
+
+                        <!-- Botão Trocar Senha -->
+        <div class="text-center mt-3">
+          <button type="button" class="btn w-100 password-btn text-white">Trocar Senha</button>
+        </div>
+
+
+
+
+        <div class="text-center mt-4">
+          <button type="submit" class="btn w-100  save-btn text-white">Salvar Alterações!</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  </body>
+
+
+
+
+
