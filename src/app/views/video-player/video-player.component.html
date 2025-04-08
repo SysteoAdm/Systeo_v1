@@ -1,13 +1,24 @@
-<body style="background-color: black;">
+<body class="pb-5" style="background-color: black;">
 
+  <div class="container-fluid cont-header position-relative d-flex align-items-center justify-content-center">
+    <div class="d-flex align-items-center gap-2">
+      <h2 class="text-white m-0">{{ videoTitle }}</h2>
+      <button class="btn btn-primary">Alguma Ação</button>
+    </div>
 
-<div class="container-fluid cont-header d-flex align-items-center justify-content-center gap-3">
-  <h2 class="text-white m-0">{{ videoTitle }}</h2>
-  <button class="btn btn-primary">Alguma Ação</button>
-</div>
-<div class="container text-center">
-  <iframe [src]="videoUrl" class="w-100" style="height: 85vh; border: none;" allowfullscreen></iframe>
-</div>
+    <!-- Botão X posicionado à direita -->
+    <button
+      class="btn custom-close-btn position-absolute end-0 me-3"
+      (click)="closePlayer()"
+      aria-label="Fechar">×
+    </button>
 
-<app-slider-cursos-img01></app-slider-cursos-img01>
+  </div>
+
+  <div class="container text-center pb-5">
+    <iframe [src]="videoUrl" class="w-100" style="height: 85vh; border: none;" allowfullscreen></iframe>
+  </div>
+
+  <app-slide-curso-adolescentes></app-slide-curso-adolescentes>
+
 </body>

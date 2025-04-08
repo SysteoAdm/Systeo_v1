@@ -1,51 +1,323 @@
 
-<!-- ==================================== Slider Inicial ========================================================= -->
+<section class="container my-5">
+  <!-- TÍTULO CENTRALIZADO -->
+  <h1 class="text-center display-4 fw-bold mb-4">Bem-vindo ao Curso A Doltrina do Espírito Santo</h1>
 
-<div class="container-fluid pb-3">
-  <div class="container position-relative">
-    <a class="link-title text-start fs-4 fw-bold" [routerLink]="['/Lancamentos']">Lançados Recentemente</a>
-    <div class="d-flex align-items-center">
-      <!-- Botão Anterior -->
-      <button class="btn btn-dark me-2" (click)="prev()" [disabled]="startIndex === 0">
-        <i class="bi bi-chevron-left"></i>
-      </button>
+  <!-- IMAGEM BANNER -->
+  <div class="text-center mb-4">
+    <img
+      src="https://picsum.photos/1300/300"
+      alt="Banner do Curso"
+      class="img-fluid rounded w-100"
+      style="max-height: 300px; object-fit: cover;"
+    >
+  </div>
 
-      <!-- Área do Slider -->
-      <div class="slider-wrapper flex-grow-1 overflow-hidden mt-3">
-        <div class="d-flex flex-nowrap gap-2">
-          <img
-            *ngFor="let img of visibleImages"
-            [src]="img.img"
-            class="img-fluid clickable-image"
-            (click)="onImageClick(img.videoUrl, img.title)"
-          />
+  <!-- FOTO DO PROFESSOR + NOME -->
+  <div class="d-flex align-items-center justify-content-center mb-4">
+    <img
+      src="https://i.pravatar.cc/100"
+      alt="Foto do Professor"
+      class="rounded-circle me-3"
+      style="width: 60px; height: 60px; object-fit: cover;"
+    >
+    <h5 class="mb-0">Prof. Rogério Luiz</h5>
+  </div>
+
+  <!-- SEPARADOR -->
+  <hr class="border border-secondary-subtle opacity-75">
+</section>
+
+
+<app-slide-curso-a-doutrina-do-espirito-santo [returnRoute]="'/A-Doutrina-Do-Espírito-Santo'"></app-slide-curso-a-doutrina-do-espirito-santo>
+
+
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="d-flex align-items-center mb-4">
+      <i class="bi bi-grid-fill me-2 text-primary"></i>
+      <span class="text-primary">Conteúdo Programático:</span>
+    </h2>
+    <p class="text-secondary mb-4">Explore diversas áreas do conhecimento com nossos cursos especializados.</p>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+      <!-- MOBILE -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title text-danger d-flex align-items-center">
+              <i class="bi bi-phone-fill me-2"></i> Mobile
+            </h5>
+            <ul class="list-unstyled small">
+              <li>Android Jetpack Compose: Armazenamento de dados e arquivos</li>
+              <li>Android: evolua seus apps com Fragments e navegação</li>
+              <li>Construa aplicativos iOS com SwiftUI</li>
+              <li>Dart: linguagem do Flutter</li>
+              <li>Desenvolva apps iOS com view code</li>
+              <li>Primeiro app Android com Kotlin</li>
+              <li>Primeiro app com Flutter</li>
+              <li>Domine Swift</li>
+              <li><strong>ver Escola</strong></li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <!-- Botão Próximo -->
-      <button class="btn btn-dark ms-2" (click)="next()" [disabled]="startIndex + imagesPerView >= images.length">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-  </div>
-</div>
-
-
-<!-- ==================================== Modal do vídeo ========================================================= -->
-<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true" data-bs-backdrop="static">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="videoModalLabel">{{ videoTitle }}</h5> <!-- Exibindo o título do vídeo -->
-        <button type="button" class="btn btn-link ms-auto" data-bs-dismiss="modal" aria-label="Close">
-          <i class="bi bi-x"></i>
-        </button>
-      </div>
-      <div class="modal-body">
-        <!-- Player do vídeo -->
-        <iframe [src]="videoUrl" title="Video" allowfullscreen class="w-100" style="height: 85vh; border: none;"></iframe>
+      <!-- PROGRAMAÇÃO -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title text-success d-flex align-items-center">
+              <i class="bi bi-code-slash me-2"></i> Programação
+            </h5>
+            <ul class="list-unstyled small">
+              <li>Iniciante em programação</li>
+              <li>APIs com Node.js e Express</li>
+              <li>Programação em C# OO</li>
+              <li>Programação em Go</li>
+              <li>Java com OO</li>
+              <li>JavaScript Back-end</li>
+              <li>PHP com OO</li>
+              <li>Python com OO</li>
+              <li><strong>ver Escola</strong></li>
+            </ul>
+          </div>
+        </div>
       </div>
 
+      <!-- FRONT-END -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title text-warning d-flex align-items-center">
+              <i class="bi bi-window-fullscreen me-2"></i> Front-end
+            </h5>
+            <ul class="list-unstyled small">
+              <li>HTML e CSS do zero</li>
+              <li>Acessibilidade com HTML/CSS/JS</li>
+              <li>Angular 19</li>
+              <li>Angular avançado com SSR e signals</li>
+              <li>Design System com Nx</li>
+              <li>Apps acessíveis e testes</li>
+              <li>Apps web ágeis com Angular</li>
+              <li>Testes com Angular</li>
+              <li><strong>ver Escola</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEVOPS -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title text-info d-flex align-items-center">
+              <i class="bi bi-cloud-upload-fill me-2"></i> DevOps
+            </h5>
+            <ul class="list-unstyled small">
+              <li>AWS: gerenciamento e operação</li>
+              <li>AWS: observabilidade e containers</li>
+              <li>Azure</li>
+              <li>Certificação AWS Practitioner</li>
+              <li>Certificação AZ-204</li>
+              <li>Certificação AZ-900</li>
+              <li>Solutions Architect - Associate</li>
+              <li>Google Cloud Engineer</li>
+              <li><strong>ver Escola</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- UX & DESIGN -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title text-primary d-flex align-items-center">
+              <i class="bi bi-brush-fill me-2"></i> UX & Design
+            </h5>
+            <ul class="list-unstyled small">
+              <li>Acessibilidade em UX</li>
+              <li>Adobe Illustrator para interfaces</li>
+              <li>Adobe Mobile</li>
+              <li>Adobe Photoshop</li>
+              <li>Apresentações de impacto</li>
+              <li>Arquitetura da Informação</li>
+              <li>Blender</li>
+              <li>Canva</li>
+              <li><strong>ver Escola</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- DATA SCIENCE -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title text-secondary d-flex align-items-center">
+              <i class="bi bi-bar-chart-fill me-2"></i> Data Science
+            </h5>
+            <ul class="list-unstyled small">
+              <li>Administração com PostgreSQL</li>
+              <li>Performance com Oracle</li>
+              <li>Apache Airflow</li>
+              <li>Apache Spark com Python</li>
+              <li>Data Science com Python</li>
+              <li>AWS Data Lake</li>
+              <li>BigQuery</li>
+              <li>BI com Excel</li>
+              <li><strong>ver Escola</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- INOVAÇÃO & GESTÃO -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title text-dark d-flex align-items-center">
+              <i class="bi bi-lightbulb-fill me-2"></i> Inovação & Gestão
+            </h5>
+            <ul class="list-unstyled small">
+              <li>Agilidade: abordagens avançadas</li>
+              <li>Aprendizagem</li>
+              <li>Autoliderança</li>
+              <li>Business Agility</li>
+              <li>Certificação PMP / CAPM</li>
+              <li>Comunicação</li>
+              <li>Comunicação para líderes</li>
+              <li>Conformidade Legal</li>
+              <li><strong>ver Escola</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
+</section>
+
+
+
+
+<section class="py-5">
+  <div class="container">
+    <!-- Título 1 -->
+    <h2 class="text-primary mb-4">Título 1</h2>
+
+    <!-- Parágrafo 1 -->
+    <p>
+      Este é o <strong class="text-danger">primeiro parágrafo</strong> do conteúdo. Ele serve como uma introdução para
+      o que será discutido a seguir.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum scelerisque suscipit dui nec sagittis.
+      Proin in erat vitae magna tempus tincidunt. Ut eget magna turpis. Suspendisse ut mauris non mauris dictum efficitur.
+      Integer ac justo efficitur, fermentum nunc vitae, facilisis purus. Pellentesque in justo a erat tincidunt euismod.
+      Sed at risus ac velit ullamcorper imperdiet. Phasellus tristique, nisl et tristique convallis, ligula massa porttitor erat,
+      nec posuere risus mauris a velit. Praesent feugiat, arcu ut vehicula consequat, sapien mi congue sem, nec scelerisque ex purus id est.
+    </p>
+
+    <!-- Parágrafo 2 -->
+    <p>
+      Neste <strong class="text-success">segundo parágrafo</strong>, abordamos mais alguns detalhes importantes que
+      merecem atenção durante o curso.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in lacus vitae elit tincidunt hendrerit.
+      Vivamus eget ex nec mi scelerisque fermentum. Sed in libero dignissim, iaculis leo non, dapibus felis.
+      Suspendisse potenti. Aliquam erat volutpat.
+    </p>
+
+    <!-- Lista -->
+    <ul class="list-unstyled ps-3">
+      <li><span class="text-warning">★</span> um texto lorem aqui;</li>
+      <li><span class="text-warning">★</span> um texto lorem aqui;</li>
+      <li><span class="text-warning">★</span> um texto lorem aqui;</li>
+    </ul>
+
+    <!-- Parágrafo 3 -->
+    <p>
+      Finalizando esta seção, é importante <strong class="text-info">manter o foco</strong> no conteúdo apresentado,
+      pois ele será fundamental para os próximos tópicos.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in lacus vitae elit tincidunt hendrerit.
+      Vivamus eget ex nec mi scelerisque fermentum. Sed in libero dignissim, iaculis leo non, dapibus felis.
+      Suspendisse potenti. Aliquam erat volutpat.
+    </p>
+
+    <!-- Título 2 -->
+    <h2 class="text-success mt-5 mb-4">Título 2</h2>
+
+    <!-- Parágrafo 1 -->
+    <p>
+      Continuando, agora entramos em uma nova etapa do aprendizado, com mais <strong class="text-warning">exemplos
+      práticos</strong> e interações.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus augue nec magna convallis, sed vestibulum nunc fermentum.
+      Aenean tempor sapien sed neque congue vehicula. Cras varius nulla sed eros ultricies, sed eleifend sem tristique.
+      Suspendisse eu lectus a tellus accumsan commodo. Integer nec augue sed arcu efficitur lobortis.
+      Sed posuere dui ut nisi ultrices, a faucibus diam laoreet. Donec volutpat tellus vel nisi feugiat, nec facilisis odio sagittis.
+      Etiam blandit eros nec justo dignissim, nec vehicula sem egestas.
+    </p>
+
+    <!-- Lista -->
+    <ul class="list-unstyled ps-3">
+      <li><span class="text-danger">✔</span> um texto lorem aqui;</li>
+      <li><span class="text-danger">✔</span> um texto lorem aqui;</li>
+      <li><span class="text-danger">✔</span> um texto lorem aqui;</li>
+    </ul>
+
+    <!-- Parágrafo 2 -->
+    <p>
+      Esses tópicos são <strong class="text-primary">essenciais</strong> para o entendimento global da aula, portanto,
+      revise-os com atenção.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in lacus vitae elit tincidunt hendrerit.
+      Vivamus eget ex nec mi scelerisque fermentum. Sed in libero dignissim, iaculis leo non, dapibus felis.
+      Suspendisse potenti. Aliquam erat volutpat.
+    </p>
+
+    <!-- Parágrafo 3 -->
+    <p>
+      Ao final deste módulo, você terá uma <strong class="text-success">base sólida</strong> para avançar nos
+      conteúdos seguintes do curso.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus augue nec magna convallis, sed vestibulum nunc fermentum.
+      Aenean tempor sapien sed neque congue vehicula. Cras varius nulla sed eros ultricies, sed eleifend sem tristique.
+      Suspendisse eu lectus a tellus accumsan commodo. Integer nec augue sed arcu efficitur lobortis.
+      Sed posuere dui ut nisi ultrices, a faucibus diam laoreet. Donec volutpat tellus vel nisi feugiat, nec facilisis odio sagittis.
+      Etiam blandit eros nec justo dignissim, nec vehicula sem egestas.
+    </p>
+    <!-- Título 3 -->
+    <h2 class="text-success mt-5 mb-4">Título 3</h2>
+
+    <!-- Parágrafo 1 -->
+    <p>
+      Continuando, agora entramos em uma nova etapa do aprendizado, com mais <strong class="text-warning">exemplos
+      práticos</strong> e interações.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus augue nec magna convallis, sed vestibulum nunc fermentum.
+      Aenean tempor sapien sed neque congue vehicula. Cras varius nulla sed eros ultricies, sed eleifend sem tristique.
+      Suspendisse eu lectus a tellus accumsan commodo. Integer nec augue sed arcu efficitur lobortis.
+      Sed posuere dui ut nisi ultrices, a faucibus diam laoreet. Donec volutpat tellus vel nisi feugiat, nec facilisis odio sagittis.
+      Etiam blandit eros nec justo dignissim, nec vehicula sem egestas.
+    </p>
+
+    <!-- Lista -->
+    <ul class="list-unstyled ps-3">
+      <li><span class="text-danger">✔</span> um texto lorem aqui;</li>
+      <li><span class="text-danger">✔</span> um texto lorem aqui;</li>
+      <li><span class="text-danger">✔</span> um texto lorem aqui;</li>
+    </ul>
+
+    <!-- Parágrafo 2 -->
+    <p>
+      Esses tópicos são <strong class="text-primary">essenciais</strong> para o entendimento global da aula, portanto,
+      revise-os com atenção.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in lacus vitae elit tincidunt hendrerit.
+      Vivamus eget ex nec mi scelerisque fermentum. Sed in libero dignissim, iaculis leo non, dapibus felis.
+      Suspendisse potenti. Aliquam erat volutpat.
+    </p>
+
+    <!-- Parágrafo 3 -->
+    <p>
+      Ao final deste módulo, você terá uma <strong class="text-success">base sólida</strong> para avançar nos
+      conteúdos seguintes do curso.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus augue nec magna convallis, sed vestibulum nunc fermentum.
+      Aenean tempor sapien sed neque congue vehicula. Cras varius nulla sed eros ultricies, sed eleifend sem tristique.
+      Suspendisse eu lectus a tellus accumsan commodo. Integer nec augue sed arcu efficitur lobortis.
+      Sed posuere dui ut nisi ultrices, a faucibus diam laoreet. Donec volutpat tellus vel nisi feugiat, nec facilisis odio sagittis.
+      Etiam blandit eros nec justo dignissim, nec vehicula sem egestas.
+    </p>
+  </div>
+
+</section>

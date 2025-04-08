@@ -1,0 +1,36 @@
+/* Estilo do slider */
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.clickable-image {
+  width: 341px;
+  height: 192px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.clickable-image:hover {
+  transform: scale(1.05);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.container-fluid .cont-initial {
+  background: linear-gradient(to left, #EDEDED, white 50%, #EDEDED);
+}
+
+.link-title {
+  color: #57c1eb;
+  text-decoration: none;
+}
+
+.link-title:hover {
+  cursor: pointer;
+  color: var(--azul-intenso);
+}

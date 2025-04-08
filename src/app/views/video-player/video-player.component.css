@@ -1,5 +1,20 @@
 .cont-header {
-  background-color: #545454;
+  background: linear-gradient(90deg, #1a1a2e, #16213e);
   height: 80px;
-  display: flex;
+  position: relative;
+}
+
+.custom-close-btn {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: #f0f0f0; /* branco gelo */
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  /* centraliza verticalmente */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
