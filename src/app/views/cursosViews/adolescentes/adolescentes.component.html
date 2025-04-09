@@ -388,26 +388,11 @@
 
 
 
-
-<section class="section-cards py-5">
-  <div class="container">
-    <div class="card-grid">
-      <div class="custom-card text-center" *ngFor="let card of cards">
-        <div class="icon mb-2">
-          <i [class]="card.icon"></i>
-        </div>
-        <h5 class="card-title mb-1">{{ card.title }}</h5>
-        <p class="card-text">{{ card.description }}</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="container-fluid my-5 py-5 faq-section">
+<div class="container-fluid py-5 faq-section">
   <div class="faq-wrapper">
-    <h2 class="mb-4">Perguntas Frequentes</h2>
+    <h2 class="mb-4 pt-5">Perguntas Frequentes</h2>
 
-    <div class="accordion" id="faqAccordion">
+    <div class="accordion pb-5" id="faqAccordion">
 
       <!-- FAQ 1 -->
       <div class="accordion-item">

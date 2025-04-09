@@ -79,6 +79,34 @@
 }
 
 
+/* //Notificações */
+.notification-item {
+  background-color: #2c2c2c;
+  color: #d1d1d1;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.notification-item:hover {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.notification-item:hover strong,
+.notification-item:hover small {
+  cursor: pointer;
+  color: #ffffff;
+}
+
+
+.UserName-btn{
+  color: #ffffff;
+}
+.UserName-btn:hover{
+  color: #ffffff;
+}
+
+
 /* # Responsividade CSS: */
 
 @media (max-width: 575.98px) {

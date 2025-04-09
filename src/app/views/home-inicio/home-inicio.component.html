@@ -1,22 +1,23 @@
 <app-menu-top-landing></app-menu-top-landing>
 
 <section class="section-curso container-fluid py-5">
+  <div class="container-fluid ">
   <div class="row align-items-center mx-5">
     <!-- Coluna Esquerda: Texto -->
     <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
       <h1 class="title-main">Cursos <span class="text-gradient">Imersivos</span><br><span class="title-sub">Bíblicos Online</span></h1>
       <p class="descricao">
-        Domine as <strong>tecnologias mais transformadoras</strong> da atualidade, acelere sua carreira e aproveite as melhores oportunidades da sua área.
+        Domine as <strong>tópicos mais transformadores</strong> da atualidade, acelere o desenvolvimento de sua carreira na Fé Cristã através do conhecimento e sabedoria da Palavra de Deus.
       </p>
 
       <div class="row text-center g-3 mt-4">
         <div class="col-6 col-md-4 info-box">
           <i class="bi bi-camera-video-fill"></i>
-          <p><strong>100% ao vivo</strong><br>Aulas</p>
+          <p><strong>100% Online</strong><br>Aulas</p>
         </div>
         <div class="col-6 col-md-4 info-box">
           <i class="bi bi-people-fill"></i>
-          <p><strong>Turmas</strong><br>limitadas</p>
+          <p><strong>Turmas</strong><br>ilimitadas</p>
         </div>
         <div class="col-6 col-md-4 info-box">
           <i class="bi bi-person-badge-fill"></i>
@@ -32,11 +33,11 @@
         </div>
         <div class="col-6 col-md-4 info-box">
           <i class="bi bi-cpu-fill"></i>
-          <p><strong>Acesso à</strong><br>Alura PRO</p>
+          <p><strong>Acesso à</strong><br>Digital Full</p>
         </div>
       </div>
 
-      <button class="cta-btn mt-4">Criar sua conta agora!</button>
+      <button class="cta-btn mt-4" [routerLink]="['/Criar-Novo-Usuario']">Criar sua conta agora!</button>
     </div>
 
     <!-- Coluna Direita: Imagem -->
@@ -51,10 +52,22 @@
 
     </div>
   </div>
+</div>
 </section>
 
 <section class="section-cards py-5">
   <div class="container">
+    <div class="row">
+      <div class="col-lg-6 text-center mx-auto mb-4">
+        <h1 class="title-main">
+          Veja alguns de nossos <span class="text-gradient">Cursos</span><br>
+        </h1>
+        <p class="descricao">
+          Nossos treinamentos <strong>são 100% online</strong> e já estão liberados para você começar quando quiser.
+        </p>
+      </div>
+    </div>
+
     <div class="card-grid">
       <div class="custom-card text-center" *ngFor="let card of cards">
         <div class="icon mb-2">
@@ -66,3 +79,6 @@
     </div>
   </div>
 </section>
+
+
+<app-footer-landing></app-footer-landing>

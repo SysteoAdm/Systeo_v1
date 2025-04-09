@@ -15,6 +15,7 @@ export class AppComponent {
 
   constructor(private router: Router) {
 
+    //Menu Principal
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         // Rotas onde a navbar NÃO deve aparecer
@@ -24,10 +25,12 @@ export class AppComponent {
       }
     });
 
+
+    //Footer Principal
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         // Rotas onde a navbar NÃO deve aparecer
-        const noNavbarRoutes = ['/LoginPage', '/Criar-Novo-Usuario',];
+        const noNavbarRoutes = ['/LoginPage', '/Criar-Novo-Usuario','/homeEscolaDigital'];
 
         this.showFooter = !noNavbarRoutes.includes(event.urlAfterRedirects);
       }

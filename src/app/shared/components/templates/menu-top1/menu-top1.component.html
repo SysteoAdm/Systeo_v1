@@ -4,104 +4,162 @@
       <img class="logo-menu" src="assets/Logo_only.webp" alt="Logo" id="logo-img">
     </a>
 
-<!-- Div para campo de pesquisa com ícone -->
-<!-- Div para campo de pesquisa com ícone -->
-<div class="search d-flex align-items-center d-lg-none ms-auto me-3">
-  <!-- O input só é exibido quando isInputVisible for true -->
-  <input
-    *ngIf="isInputVisible"
-    type="text"
-    class="form-control me-2"
-    placeholder="Pesquisar..."
-    [(ngModel)]="searchQuery"
-    name="searchQuery"
-    [ngStyle]="{'width': isInputVisible ? '115px' : '80px'}" />
+    <!-- Pesquisa mobile -->
+    <div class="search d-flex align-items-center d-lg-none ms-auto me-3">
+      <input
+        *ngIf="isInputVisible"
+        type="text"
+        class="form-control me-2"
+        placeholder="Pesquisar..."
+        [(ngModel)]="searchQuery"
+        name="searchQuery"
+        [ngStyle]="{'width': isInputVisible ? '115px' : '80px'}" />
+      <button class="btn btn-light" (click)="onSearchOrExpand()">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
 
-  <button
-    class="btn btn-light"
-    (click)="onSearchOrExpand()">
-    <i class="bi bi-search"></i>
-  </button>
-</div>
-
-    <!-- Botão para alternar o menu em telas pequenas -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Botão menu mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Menu de navegação -->
+    <!-- Conteúdo da navbar -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-4">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" [routerLink]="['/home']">Início</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Cursos
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" [routerLink]="['/EscolaBiblica']" routerLinkActive="ativo">Escola Bíblica</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/CursosDeFamilia']" routerLinkActive="ativo">Cursos de Família</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/A-Doutrina-Do-Espírito-Santo']" routerLinkActive="ativo">A Doutrina Do Espírito Santo</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/Adolescentes']" routerLinkActive="ativo">Adolescentes</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/administrando-a-vida-financeira']" routerLinkActive="ativo">Administrando A Vida Financeira</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/Apologetica-Defesa-Da-Fe']" routerLinkActive="ativo">Apologética (Defesa Da Fé)</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/BasesDaFeCrista']" routerLinkActive="ativo">Bases Da Fé Cristã</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/Casais']" routerLinkActive="ativo">Casais</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/Conhecendo-Deus-E-Fazendo-Sua-Vontade']" routerLinkActive="ativo">Conhecendo Deus E Fazendo Sua Vontade</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/EstudosNoAntigoTestamento']" routerLinkActive="ativo">Estudos No Antigo Testamento</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/EstudosNoNovoTestamento']" routerLinkActive="ativo">Estudos No Novo Testamento</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/HistoriaDaIgreja']" routerLinkActive="ativo">História da Igreja</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/InterpretacaoBiblica']" routerLinkActive="ativo">Interpretação Bíblica</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/OsSalmos']" routerLinkActive="ativo">Os Salmos</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/Toda-A-Biblia-Em-Um-Ano']" routerLinkActive="ativo">Toda A Bíblia Em Um Ano</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/UmaNovaVida']" routerLinkActive="ativo">Uma Nova Vida</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/UmaVidaComPropositos']" routerLinkActive="ativo">Uma Vida Com Propósitos</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/Vida-E-Obra-Do-Apostolo-Paulo']" routerLinkActive="ativo">Vida E Obra Do Apóstolo Paulo</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/12-Passos-A-Luz-Das-Escrituras']" routerLinkActive="ativo">12 Passos À Luz Das Escrituras</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/FormacaoDeLideres']" style="color: cyan;">Curso Privado 1</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/FormacaoDeLideres']" style="color: cyan;">Curso Privado 2</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" [routerLink]="['/Lancamentos']">Lançamentos</a></li>
-          </ul>
+          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">Cursos</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" [routerLink]="['/EscolaBiblica']" routerLinkActive="ativo">Escola Bíblica</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/CursosDeFamilia']" routerLinkActive="ativo">Cursos de Família</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/A-Doutrina-Do-Espírito-Santo']" routerLinkActive="ativo">A Doutrina Do Espírito Santo</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/Adolescentes']" routerLinkActive="ativo">Adolescentes</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/administrando-a-vida-financeira']" routerLinkActive="ativo">Administrando A Vida Financeira</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/Apologetica-Defesa-Da-Fe']" routerLinkActive="ativo">Apologética (Defesa Da Fé)</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/BasesDaFeCrista']" routerLinkActive="ativo">Bases Da Fé Cristã</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/Casais']" routerLinkActive="ativo">Casais</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/Conhecendo-Deus-E-Fazendo-Sua-Vontade']" routerLinkActive="ativo">Conhecendo Deus E Fazendo Sua Vontade</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/EstudosNoAntigoTestamento']" routerLinkActive="ativo">Estudos No Antigo Testamento</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/EstudosNoNovoTestamento']" routerLinkActive="ativo">Estudos No Novo Testamento</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/HistoriaDaIgreja']" routerLinkActive="ativo">História da Igreja</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/InterpretacaoBiblica']" routerLinkActive="ativo">Interpretação Bíblica</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/OsSalmos']" routerLinkActive="ativo">Os Salmos</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/Toda-A-Biblia-Em-Um-Ano']" routerLinkActive="ativo">Toda A Bíblia Em Um Ano</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/UmaNovaVida']" routerLinkActive="ativo">Uma Nova Vida</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/UmaVidaComPropositos']" routerLinkActive="ativo">Uma Vida Com Propósitos</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/Vida-E-Obra-Do-Apostolo-Paulo']" routerLinkActive="ativo">Vida E Obra Do Apóstolo Paulo</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/12-Passos-A-Luz-Das-Escrituras']" routerLinkActive="ativo">12 Passos À Luz Das Escrituras</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/FormacaoDeLideres']" style="color: cyan;">Curso Privado 1</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/FormacaoDeLideres']" style="color: cyan;">Curso Privado 2</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" [routerLink]="['/Lancamentos']">Lançamentos</a></li>
+            </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" [routerLink]="['/EscolaBiblica']">Novidades</a>
+          <a class="nav-link active" [routerLink]="['/EscolaBiblica']">Novidades</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" [routerLink]="['/FaleConosco']">Fale Conosco</a>
+          <a class="nav-link active" [routerLink]="['/FaleConosco']">Fale Conosco</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: cyan;">
-            Administração
-          </a>
+          <a class="nav-link active dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: cyan;">Administração</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" [routerLink]="['/Usuarios']">Usuários</a></li>
             <li><a class="dropdown-item" [routerLink]="['/TestPage']">TestPage</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: goldenrod;">
-            Mais...
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" [routerLink]="['/Perfil']">Perfil</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/EscolaBiblica']">Certificados</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/LoginPage']">Sair</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <button class="btn btn-outline-light d-lg-none btn-login-toggled" ><a class="nav-link active" #aToggled aria-current="page" [routerLink]="['/LoginPage']">Login</a></button>
-        </li>
-        </ul>
-            <!-- Formulário de pesquisa -->
-            <form class="d-flex d-none d-lg-flex searchBar" (ngSubmit)="searchVideos(searchQuery)">
-              <input class="form-control me-2" #searchBarInput type="search" placeholder="Pesquisar..." [(ngModel)]="searchQuery" name="searchQuery" required>
-              <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
-            </form>
 
-            <!-- Botão de login -->
-            <button class="btn btn-outline-light  d-none d-lg-flex btnLogin" type="submit" [routerLink]="['/LoginPage']">Login</button>
+        <!-- Botão de login (mobile) -->
+        <li class="nav-item d-lg-none">
+          <button class="btn btn-outline-light btn-login-toggled w-100 mt-2">
+            <a class="nav-link active" [routerLink]="['/LoginPage']">Login</a>
+          </button>
+        </li>
+      </ul>
+
+      <!-- Campo de pesquisa (desktop) -->
+      <form class="d-flex d-none d-lg-flex searchBar" (ngSubmit)="searchVideos(searchQuery)">
+        <input class="form-control me-2" #searchBarInput type="search" placeholder="Pesquisar..."
+          [(ngModel)]="searchQuery" name="searchQuery" required>
+        <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+      </form>
+
+    <!-- Ícone de notificações -->
+    <div class="dropdown m2-3 ms-2 d-none d-lg-block">
+      <a class="position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-bell" style="font-size: 20px; color: gold;"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          4
+          <span class="visually-hidden">novas notificações</span>
+        </span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end p-2" style="background-color: #2c2c2c; min-width: 450px;">
+        <li class="notification-item mb-2 rounded p-2">
+          <div class="d-flex align-items-center">
+            <img src="/assets/mini_cover2.webp" width="80" height="50" class="me-2">
+            <div>
+              <strong>Parabéns! Curso concluído.</strong><br>
+              <small>Você concluiu o curso Casados Pra Sempre.</small><br>
+              <small>Data: 00/00/2024</small>
+            </div>
+          </div>
+        </li>
+        <li><hr class="dropdown-divider border-secondary"></li>
+        <li class="notification-item mb-2 rounded p-2">
+          <div class="d-flex align-items-center">
+            <img src="/assets/recado12345.webp" width="80" height="50" class="me-2">
+            <div>
+              <strong>Recado da Administração</strong><br>
+              <small>Entre em contato com a gerência pelo (21)5555-0000</small><br>
+              <small>Data: 00/00/2024</small>
+            </div>
+          </div>
+        </li>
+        <li><hr class="dropdown-divider border-secondary"></li>
+        <li class="notification-item mb-2 rounded p-2">
+          <div class="d-flex align-items-center">
+            <img src="/assets/mini_cover3.webp" width="80" height="50" class="me-2">
+            <div>
+              <strong>Novo curso disponível</strong><br>
+              <small>Clique aqui para ver seu novo certificado.</small><br>
+              <small>Data: 00/00/2024</small>
+            </div>
+          </div>
+        </li>
+        <li><hr class="dropdown-divider border-secondary"></li>
+        <li class="notification-item mb-2 rounded p-2">
+          <div class="d-flex align-items-center">
+            <img src="/assets/certificado_icon.webp" width="80" height="50" class="me-2">
+            <div>
+              <strong>Certificado novo disponível!</strong><br>
+              <small>Clique aqui para ver seu novo certificado.</small><br>
+              <small>Data: 00/00/2024</small>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ============================================= -->
+
+    <!-- Botão "Mais" à direita da barra de pesquisa -->
+    <div class="dropdown m2-3 d-none d-lg-block ms-4 me-5">
+      <a class="position-relative dropdown-toggle UserName-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+       Bianca
+      </a>
+      <ul class="dropdown-menu  dropdown-menu-end ">
+        <li><a class="dropdown-item" [routerLink]="['/Perfil']">Perfil</a></li>
+        <li><a class="dropdown-item" [routerLink]="['/EscolaBiblica']">Certificados</a></li>
+        <li><a class="dropdown-item" [routerLink]="['/LoginPage']">Sair</a></li>
+      </ul>
+    </div>
+
+
     </div>
   </div>
 </nav>

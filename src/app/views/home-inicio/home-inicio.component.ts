@@ -9,18 +9,18 @@ export class HomeInicioComponent {
   cards = [
     {
       icon: 'bi bi-lightning-fill',
-      title: 'Aula 1',
-      description: 'Processos otimizados para resultados rápidos.'
+      title: 'Bíblia',
+      description: 'Estudos do Novo Testamento.'
     },
     {
       icon: 'bi bi-cpu-fill',
-      title: 'Aula 2',
-      description: 'Infraestrutura moderna e eficiente.'
+      title: 'Bíblia',
+      description: 'Estudos do Velho Testamento.'
     },
     {
       icon: 'bi bi-people-fill',
-      title: 'Aula 3',
-      description: 'Trabalho em equipe com alto desempenho.'
+      title: 'Casais',
+      description: 'Casados Pra Sempre.'
     },
     {
       icon: 'bi bi-globe2',
