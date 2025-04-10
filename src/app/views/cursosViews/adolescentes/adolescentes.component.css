@@ -62,7 +62,8 @@
 
 .accordion-body {
   background-color: #212529;
-  color: #ffffff;
+  /* color: #E0E0E0; */
+  color: #b6b9c2;
   font-size: 1rem;
   line-height: 1.6;
 }

@@ -108,33 +108,60 @@
       </div>
       <div class="row mt-4">
         <div class="col-md-6">
-          <label class="form-label">Você se considera:</label>
-          <select class="form-control" >
-            <option value="">Selecione</option>
-            <option value="sim">Cristão</option>
-            <option value="nao">Outro</option>
-          </select>
+          <label class="form-label d-block">Você se considera:</label>
+
+          <div class="form-check form-switch">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="cristaoCheckbox"
+              [(ngModel)]="usuario.cristao"
+              name="eCristao"
+            />
+            <label class="form-check-label" for="cristaoCheckbox">
+              {{ usuario.cristao ? 'Cristão' : 'Outro' }}
+            </label>
+          </div>
         </div>
+
         <div class="col-md-6">
-          <label class="form-label">Você é mebro da Igreja do Recreio?</label>
-          <select class="form-control" >
-            <option value="">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
+          <label class="form-label d-block">Você é membro da Igreja do Recreio?</label>
+
+          <div class="form-check form-switch">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="membroCheckbox"
+              [(ngModel)]="usuario.membroIgrejaDoRecreio"
+              name="eMembro"
+            />
+            <label class="form-check-label" for="membroCheckbox">
+              {{ usuario.membroIgrejaDoRecreio ? 'Sim' : 'Não' }}
+            </label>
+          </div>
         </div>
       </div>
       <!-- Se é batizado -->
       <div class="row mt-4">
         <div class="col-md-6">
-          <label class="form-label">Você é batizado?</label>
-          <select class="form-control" [(ngModel)]="usuario.eBatizado" name="eBatizado" (change)="onBatismoChange()">
-            <option value="">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
+          <label class="form-label d-block">Você é batizado?</label>
+
+          <div class="form-check form-switch">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="batizadoCheckbox"
+              [(ngModel)]="usuario.eBatizado"
+              name="eBatizado"
+              (change)="onBatismoChange()"
+            />
+            <label class="form-check-label" for="batizadoCheckbox">
+              {{ usuario.eBatizado ? 'Sim' : 'Não' }}
+            </label>
+          </div>
         </div>
       </div>
+
       <!-- Campos de Batismo -->
       <div *ngIf="mostrarCamposBatismo">
         <h5 class="fw-bold mt-4">Dados de Batismo</h5>
@@ -190,7 +217,7 @@
 
 
       <div class="text-center mt-4">
-        <button type="submit" class="btn w-100  save-btn text-white">Registrar!</button>
+        <button type="submit" class="btn w-100  save-btn text-white" (click)="onRegister()">Registrar!</button>
       </div>
     </form>
   </div>

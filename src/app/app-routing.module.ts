@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'home', loadChildren: () => import('./views/home/home.module').then(m => m.HomeModule) },
+  { path: 'homeEscolaDigital', loadChildren: () => import('./views/home-inicio/home-inicio.module').then(m => m.HomeInicioModule) },
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/homeEscolaDigital',
     pathMatch: 'full'
   },
-
+  { path: 'home', loadChildren: () => import('./views/home/home.module').then(m => m.HomeModule) },
   { path: 'shared', loadChildren: () => import('./shared/shared.module').then(m => m.SharedModule) },
   { path: 'Novidades', loadChildren: () => import('./views/novidades/novidades.module').then(m => m.NovidadesModule) },
   { path: 'EscolaBiblica', loadChildren: () => import('./views/escola-biblica/escola-biblica.module').then(m => m.EscolaBiblicaModule) },
@@ -43,10 +43,12 @@ const routes: Routes = [
   { path: 'UmaVidaComPropositos', loadChildren: () => import('./views/cursosViews/uma-vida-com-propositos/uma-vida-com-propositos.module').then(m => m.UmaVidaComPropositosModule) },
   { path: 'Vida-E-Obra-Do-Apostolo-Paulo', loadChildren: () => import('./views/cursosViews/vida-e-obra-do-apostolo-paulo/vida-e-obra-do-apostolo-paulo.module').then(m => m.VidaEObraDoApostoloPauloModule) },
   { path: '12-Passos-A-Luz-Das-Escrituras', loadChildren: () => import('./views/cursosViews/doze-passos-a-luz-das-escrituras/doze-passos-a-luz-das-escrituras.module').then(m => m.DozePassosALuzDasEscriturasModule) },
-  { path: 'homeEscolaDigital', loadChildren: () => import('./views/home-inicio/home-inicio.module').then(m => m.HomeInicioModule) },
+
+  { path: 'AV-Adolescentes', loadChildren: () => import('./views/avaliacoesViews/av-adolescentes/av-adolescentes.module').then(m => m.AVAdolescentesModule) },
+  { path: 'MinhasAvalicacoes', loadChildren: () => import('./views/avaliacoesViews/minhas-avalicacoes/minhas-avalicacoes.module').then(m => m.MinhasAvalicacoesModule) },
 
   // Rota curinga para redirecionar qualquer rota inexistente para a home
-  { path: '**', redirectTo: '/home' }
+  { path: '**', redirectTo: '/homeEscolaDigital' }
 
 ];
 

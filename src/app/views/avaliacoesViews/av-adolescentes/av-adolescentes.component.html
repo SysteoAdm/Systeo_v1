@@ -1,0 +1,150 @@
+<div class="container-fluid p-0">
+
+ <!-- Barra inicial colorida com título -->
+ <div class="text-white py-2 px-4 d-flex align-items-center" style="background-color: #2F4F4F;">
+  <i class="bi bi-ui-checks-grid ms-5 me-3" style="font-size: 25px; color: #04aeae;"></i>
+  <h4 class="m-0" style="font-size: 25px; color: #d9ee94;">MINHA AVALIAÇÃO - CURSO: ADOLESCENTES</h4>
+  <button class="btn btn-light ms-auto me-5 px-4 d-flex align-items-center btnVoltar" [routerLink]="['/MinhasAvalicacoes']">
+    <i class="bi bi-arrow-left-circle-fill me-2" style="font-size: 20px; color: #04aeae;"></i>
+    Voltar
+  </button>
+</div>
+
+  <!-- Body com fundo gelo -->
+  <div class="bg-light pt-4 pb-5">
+    <div class="container">
+      <!-- Card principal branco -->
+      <div class="card shadow-lg">
+        <div class="card-body">
+
+          <!-- Título do card -->
+          <h4 class="text-center text-primary">TERMO DE RESPONSABILIDADE</h4>
+          <hr>
+
+          <!-- Texto lorem -->
+          <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-11 col-sm-12">
+
+              <p><strong>Prezado(a) aluno(a),</strong></p>
+
+              <p>
+                Para garantir um processo de avaliação justo e eficiente, leia atentamente as instruções abaixo antes de iniciar sua prova:
+              </p>
+
+              <ul class="mb-3">
+                <li class="mb-2">
+                  <strong>A prova deverá ser realizada individualmente</strong>, sem qualquer tipo de consulta a materiais externos, internet ou outras pessoas.
+                </li>
+                <li class="mb-2">
+                  <strong>Você terá 50 minutos para concluir a prova a partir do momento em que iniciá-la.</strong> Após esse tempo, o sistema será finalizado automaticamente e não será possível retomar ou continuar a tentativa.
+                </li>
+                <li class="mb-2">
+                  <strong>Não será necessário agendamento prévio</strong>, mas atenção: <strong>uma vez iniciada, a prova deve ser finalizada.</strong> Não será permitido sair e retornar em outro momento.
+                </li>
+                <li class="mb-2">
+                  O período disponível para realização da prova está definido no seu calendário acadêmico.
+                </li>
+                <li class="mb-2">
+                  Contamos com o seu compromisso, ética e responsabilidade. A prova é uma oportunidade para avaliar seu aprendizado real e oferecer um parâmetro justo do seu desempenho.
+                </li>
+              </ul>
+
+              <p class="mb-4">
+                <strong>Você é o maior beneficiado por uma avaliação honesta.</strong>
+              </p>
+
+              <div class="text-start">
+                <p class="fw-bold">Boa prova!</p>
+                <p><em>Diretoria de Ensino</em></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inputs de declaração -->
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="declaracao1">
+            <label class="form-check-label" for="declaracao1">
+              Declaro que sou o aluno titular dessa conta
+            </label>
+          </div>
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="declaracao2">
+            <label class="form-check-label" for="declaracao2">
+              Declaro que me responsabilizo
+            </label>
+          </div>
+
+          <!-- Mini card colorido -->
+          <div class=" text-white rounded p-3 mb-4" style="background-color: #2F4F4F;">
+            <div class="row">
+              <div class="col-md-6">
+                <strong>Disciplina:</strong> Adolescentes<br>
+                <strong>Aluno:</strong> Bianca Lima
+              </div>
+              <div class="col-md-6">
+                <strong>Turma:</strong> '2025.1-01 EAD'<br>
+                <strong>ID Aluno:</strong> '2131313132'
+              </div>
+            </div>
+          </div>
+
+          <!-- Aviso antes das questões -->
+          <p class="mb-4">Prezado(a) aluno(a), responda a todas as questões com atenção. Somente clique no botão
+            <strong>'FINALIZAR A PROVA'</strong> ao ter certeza de que respondeu a todas as questões e que não precisará mais alterá-las. Valor da prova: 10 pontos.</p>
+
+            <!-- Questões -->
+                <!---------------------------------------- Questão 1-------------------------------- -->
+                <div class="container mt-4">
+                  <div *ngFor="let question of questions; let i = index" class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2" style="border-top: solid 1px #c5c8ca;">
+                      <span class="text-white px-3 py-2" style="background-color: #2F4F4F;">{{ i + 1 }}.</span>
+                      <span class="text-white px-3 py-2" style="background-color: #2F4F4F;">1 ponto</span>
+                    </div>
+
+                    <p class="ms-2" style="font-weight: bold;">{{ question.text }}</p>
+
+                    <div class="form-check ms-2" *ngFor="let option of question.options; let j = index">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        [id]="'q' + question.id + getLetter(j)"
+                        [name]="'q' + question.id"
+                      />
+                      <label class="form-check-label" [for]="'q' + question.id + getLetter(j)">
+                        {{ option }}
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+          <!-- Botão de finalizar -->
+          <div class="text-center">
+            <button type="button" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#confirmModal">
+              FINALIZAR PROVA
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de confirmação -->
+  <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmModalLabel">Confirmação</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          Tem certeza de que deseja finalizar a prova? Não será possível alterar suas respostas após isso.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
