@@ -1,0 +1,8 @@
+.btnVoltar{
+  border-radius: 122px 122px 122px 122px;
+  -webkit-border-radius: 122px 122px 122px 122px;
+  -moz-border-radius: 122px 122px 122px 122px;
+}
+.btnVoltar:hover{
+  background-color: aquamarine;
+}

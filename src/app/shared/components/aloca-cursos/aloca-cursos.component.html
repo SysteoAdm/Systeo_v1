@@ -1,0 +1,94 @@
+<div class="container mt-4">
+  <!-- Dropdown para seleção do usuário -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <label for="usuarioSelect" class="form-label">Selecione um Usuário</label>
+      <select id="usuarioSelect" class="form-select" [(ngModel)]="usuarioSelecionado" name="usuarioSelect">
+        <option [ngValue]="null">-- Selecione --</option>
+        <option *ngFor="let u of usuarios" [ngValue]="u">
+          {{ u.nome }} - {{ u.email }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Detalhes do usuário selecionado -->
+  <div *ngIf="usuarioSelecionado" class="mb-4">
+    <div class="card p-3 shadow-sm">
+      <h5 class="card-title">{{ usuarioSelecionado.nome }}</h5>
+      <p class="mb-0">Telefone: {{ usuarioSelecionado.contato }}</p>
+      <p class="mb-0">Batizado: {{ usuarioSelecionado.batizado }}</p>
+      <p class="mb-0">Cristão: {{ usuarioSelecionado.cristao }}</p>
+      <p class="mb-0">Sexo: {{ usuarioSelecionado.sexo }}</p>
+      <p class="mb-0">Membro: {{ usuarioSelecionado.membresia }}</p>
+      <p class="mb-0">Estado Civil: {{ usuarioSelecionado.statusCivil }}</p>
+    </div>
+  </div>
+
+  <!-- Tabela de Cursos Matriculados -->
+  <div *ngIf="usuarioSelecionado">
+    <h5 class="mt-4">📘 Cursos Matriculados</h5>
+    <table class="table table-bordered table-striped">
+      <thead class="table-secondary">
+        <tr>
+          <th>Curso</th>
+          <th>Requisito</th>
+          <th>Status</th>
+          <th>Início</th>
+          <th>Tempo Mínimo</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let curso of usuarioSelecionado.cursosMatriculados">
+          <td>{{ curso.nome }}</td>
+          <td>{{ curso.requisito }}</td>
+          <td>
+            <select class="form-select" [(ngModel)]="curso.statusCurso">
+              <option value="pendente">Pendente</option>
+              <option value="cursando">Cursando</option>
+              <option value="pausado">Pausado</option>
+            </select>
+          </td>
+          <td>{{ curso.inicio }}</td>
+          <td>{{ curso.tempoMinimo }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="pausarCurso(curso)">Pausar</button>
+            <button class="btn btn-danger btn-sm" (click)="desalocarCurso(curso)">Desalocar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Tabela de Alocar Cursos -->
+  <div *ngIf="usuarioSelecionado">
+    <h5 class="mt-4">📥 Alocar Cursos</h5>
+    <table class="table table-bordered table-hover">
+      <thead class="table-dark text-light">
+        <tr>
+          <th>Curso</th>
+          <th>Requisito</th>
+          <th>Obrigatório?</th>
+          <th>Matriculado?</th>
+          <th>Início</th>
+          <th>Tempo Mínimo</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let curso of cursosDisponiveis">
+          <td>{{ curso.nome }}</td>
+          <td>{{ curso.requisito }}</td>
+          <td>{{ curso.conformidade }}</td>
+          <td>{{ estaMatriculado(curso) ? 'Sim' : 'Não' }}</td>
+          <td>{{ curso.dataEstreia }}</td>
+          <td>{{ curso.tempoMinimo }}</td>
+          <td>
+            <button class="btn btn-success btn-sm me-2" (click)="alocarCurso(curso)">Alocar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

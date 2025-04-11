@@ -1,0 +1,64 @@
+<div class="container-fluid p-0">
+
+  <!-- Barra inicial colorida com título -->
+  <div class="text-white py-2 mb-5 px-4 d-flex align-items-center" style="background-color: #2F4F4F;">
+   <i class="bi bi-ui-checks-grid ms-5 me-3" style="font-size: 25px; color: #04aeae;"></i>
+   <h4 class="m-0" style="font-size: 25px; color: #d9ee94;">MINHAS AVALIAÇÕES:</h4>
+   <button class="btn btn-light ms-auto me-5 px-4 d-flex align-items-center btnVoltar" [routerLink]="['/home']">
+     <i class="bi bi-arrow-left-circle-fill me-2" style="font-size: 20px; color: #04aeae;"></i>
+     Voltar
+   </button>
+ </div>
+
+<div class="container my-4 mb-5">
+
+  <!-- Linha de Semestre -->
+  <div class="bg-success text-white text-center py-2 fw-bold rounded-top">
+    Semestre: 2025.1
+  </div>
+
+  <!-- Linha de Título -->
+  <div class="bg-dark text-white d-flex flex-column flex-md-row justify-content-between align-items-center py-2 px-3">
+    <div class="fw-bold">📘 Disciplinas Online</div>
+    <div class="text-md-end small">
+      <strong>Agenda:</strong> AV1: 10/Abr a 20/Jun – AV2: 21/Jun a 30/Jul
+    </div>
+  </div>
+
+  <!-- Tabela de Avaliações -->
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped align-middle mb-0">
+      <thead class="table-secondary text-center">
+        <tr>
+          <th>Curso</th>
+          <th>Situação</th>
+          <th>
+            AV1<br>
+            <small class="text-muted">10/Abr a 20/Jun</small>
+          </th>
+          <th>
+            AV2<br>
+            <small class="text-muted">21/Jun a 30/Jul</small>
+          </th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let av of avaliacoes">
+          <td>{{ av.curso }}</td>
+          <td [ngClass]="{
+              'text-success': av.situacao === 'Disponível',
+              'text-muted': av.situacao === 'Não Disponível',
+              'text-danger': av.situacao === 'Prazo Vencido'
+            }">{{ av.situacao }}</td>
+          <td class="text-center">{{ av.av1 || '—' }}</td>
+          <td class="text-center">{{ av.av2 || '—' }}</td>
+          <td class="text-center">
+            <a [routerLink]="av.link" class="btn btn-primary btn-sm">Fazer Prova</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

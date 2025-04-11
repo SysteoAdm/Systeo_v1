@@ -1,0 +1,504 @@
+
+<section class="container my-5">
+  <!-- TÍTULO CENTRALIZADO -->
+  <h1 class="text-center display-4 fw-bold mb-4">Bem-vindo ao Curso Adolescentes</h1>
+
+  <!-- IMAGEM BANNER -->
+  <div class="text-center mb-4">
+    <img
+      src="https://picsum.photos/1300/300"
+      alt="Banner do Curso"
+      class="img-fluid rounded w-100"
+      style="max-height: 300px; object-fit: cover;"
+    >
+  </div>
+
+  <!-- FOTO DO PROFESSOR + NOME -->
+  <div class="d-flex align-items-center justify-content-center mb-4">
+    <img
+      src="https://i.pravatar.cc/100"
+      alt="Foto do Professor"
+      class="rounded-circle me-3"
+      style="width: 60px; height: 60px; object-fit: cover;"
+    >
+    <h5 class="mb-0">Prof. Rogério Luiz</h5>
+  </div>
+
+  <!-- SEPARADOR -->
+  <hr class="border border-secondary-subtle opacity-75">
+</section>
+
+
+<app-slide-curso-adolescentes [returnRoute]="'/adolescentes'"></app-slide-curso-adolescentes>
+
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="d-flex align-items-center mb-4">
+      <i class="bi bi-grid-fill me-2 text-primary"></i>
+      <span class="text-primary">Conteúdo Programático:</span>
+    </h2>
+    <p class="text-secondary mb-4">Explore diversas áreas do conhecimento com nossos cursos especializados.</p>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+      <!-- MOBILE -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title text-danger d-flex align-items-center">
+              <i class="bi bi-phone-fill me-2"></i> Mobile
+            </h5>
+            <ul class="list-unstyled small">
+              <li>Android Jetpack Compose: Armazenamento de dados e arquivos</li>
+              <li>Android: evolua seus apps com Fragments e navegação</li>
+              <li>Construa aplicativos iOS com SwiftUI</li>
+              <li>Dart: linguagem do Flutter</li>
+              <li>Desenvolva apps iOS com view code</li>
+              <li>Primeiro app Android com Kotlin</li>
+              <li>Primeiro app com Flutter</li>
+              <li>Domine Swift</li>
+              <li><strong>ver Escola</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROGRAMAÇÃO -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title text-success d-flex align-items-center">
+              <i class="bi bi-code-slash me-2"></i> Programação
+            </h5>
+            <ul class="list-unstyled small">
+              <li>Iniciante em programação</li>
+              <li>APIs com Node.js e Express</li>
+              <li>Programação em C# OO</li>
+              <li>Programação em Go</li>
+              <li>Java com OO</li>
+              <li>JavaScript Back-end</li>
+              <li>PHP com OO</li>
+              <li>Python com OO</li>
+              <li><strong>ver Escola</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FRONT-END -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title text-warning d-flex align-items-center">
+              <i class="bi bi-window-fullscreen me-2"></i> Front-end
+            </h5>
+            <ul class="list-unstyled small">
+              <li>HTML e CSS do zero</li>
+              <li>Acessibilidade com HTML/CSS/JS</li>
+              <li>Angular 19</li>
+              <li>Angular avançado com SSR e signals</li>
+              <li>Design System com Nx</li>
+              <li>Apps acessíveis e testes</li>
+              <li>Apps web ágeis com Angular</li>
+              <li>Testes com Angular</li>
+              <li><strong>ver Escola</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEVOPS -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title text-info d-flex align-items-center">
+              <i class="bi bi-cloud-upload-fill me-2"></i> DevOps
+            </h5>
+            <ul class="list-unstyled small">
+              <li>AWS: gerenciamento e operação</li>
+              <li>AWS: observabilidade e containers</li>
+              <li>Azure</li>
+              <li>Certificação AWS Practitioner</li>
+              <li>Certificação AZ-204</li>
+              <li>Certificação AZ-900</li>
+              <li>Solutions Architect - Associate</li>
+              <li>Google Cloud Engineer</li>
+              <li><strong>ver Escola</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- UX & DESIGN -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title text-primary d-flex align-items-center">
+              <i class="bi bi-brush-fill me-2"></i> UX & Design
+            </h5>
+            <ul class="list-unstyled small">
+              <li>Acessibilidade em UX</li>
+              <li>Adobe Illustrator para interfaces</li>
+              <li>Adobe Mobile</li>
+              <li>Adobe Photoshop</li>
+              <li>Apresentações de impacto</li>
+              <li>Arquitetura da Informação</li>
+              <li>Blender</li>
+              <li>Canva</li>
+              <li><strong>ver Escola</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- DATA SCIENCE -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title text-secondary d-flex align-items-center">
+              <i class="bi bi-bar-chart-fill me-2"></i> Data Science
+            </h5>
+            <ul class="list-unstyled small">
+              <li>Administração com PostgreSQL</li>
+              <li>Performance com Oracle</li>
+              <li>Apache Airflow</li>
+              <li>Apache Spark com Python</li>
+              <li>Data Science com Python</li>
+              <li>AWS Data Lake</li>
+              <li>BigQuery</li>
+              <li>BI com Excel</li>
+              <li><strong>ver Escola</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- INOVAÇÃO & GESTÃO -->
+      <div class="col">
+        <div class="card border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title text-dark d-flex align-items-center">
+              <i class="bi bi-lightbulb-fill me-2"></i> Inovação & Gestão
+            </h5>
+            <ul class="list-unstyled small">
+              <li>Agilidade: abordagens avançadas</li>
+              <li>Aprendizagem</li>
+              <li>Autoliderança</li>
+              <li>Business Agility</li>
+              <li>Certificação PMP / CAPM</li>
+              <li>Comunicação</li>
+              <li>Comunicação para líderes</li>
+              <li>Conformidade Legal</li>
+              <li><strong>ver Escola</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 bg-dark text-white">
+  <div class="container">
+    <h2 class="text-center mb-4">Conteúdo das Aulas</h2>
+
+    <!-- Menu de Tabs -->
+    <ul class="nav nav-tabs justify-content-center mb-4" id="aulaTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="aula1-tab" data-bs-toggle="tab" data-bs-target="#aula1" type="button" role="tab">Aula 1</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="aula2-tab" data-bs-toggle="tab" data-bs-target="#aula2" type="button" role="tab">Aula 2</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="aula3-tab" data-bs-toggle="tab" data-bs-target="#aula3" type="button" role="tab">Aula 3</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="aula4-tab" data-bs-toggle="tab" data-bs-target="#aula4" type="button" role="tab">Aula 4</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="aula5-tab" data-bs-toggle="tab" data-bs-target="#aula5" type="button" role="tab">Aula 5</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="aula6-tab" data-bs-toggle="tab" data-bs-target="#aula6" type="button" role="tab">Aula 6</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="aula7-tab" data-bs-toggle="tab" data-bs-target="#aula7" type="button" role="tab">Aula 7</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="aula8-tab" data-bs-toggle="tab" data-bs-target="#aula8" type="button" role="tab">Aula 8</button>
+      </li>
+    </ul>
+
+    <!-- Conteúdo das Tabs -->
+    <div class="tab-content border border-primary rounded-4 p-4 bg-dark text-white" id="aulaTabsContent">
+      <div class="tab-pane fade show active" id="aula1" role="tabpanel">
+        <section class="py-5">
+          <div class="container">
+            <!-- Título 1 -->
+            <h2 class="text-primary mb-4">Título 1</h2>
+
+            <!-- Parágrafo 1 -->
+            <p>
+              Este é o <strong class="text-danger">primeiro parágrafo</strong> do conteúdo. Ele serve como uma introdução para
+              o que será discutido a seguir.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum scelerisque suscipit dui nec sagittis.
+              Proin in erat vitae magna tempus tincidunt. Ut eget magna turpis. Suspendisse ut mauris non mauris dictum efficitur.
+              Integer ac justo efficitur, fermentum nunc vitae, facilisis purus. Pellentesque in justo a erat tincidunt euismod.
+              Sed at risus ac velit ullamcorper imperdiet. Phasellus tristique, nisl et tristique convallis, ligula massa porttitor erat,
+              nec posuere risus mauris a velit. Praesent feugiat, arcu ut vehicula consequat, sapien mi congue sem, nec scelerisque ex purus id est.
+            </p>
+
+            <!-- Parágrafo 2 -->
+            <p>
+              Neste <strong class="text-success">segundo parágrafo</strong>, abordamos mais alguns detalhes importantes que
+              merecem atenção durante o curso.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in lacus vitae elit tincidunt hendrerit.
+              Vivamus eget ex nec mi scelerisque fermentum. Sed in libero dignissim, iaculis leo non, dapibus felis.
+              Suspendisse potenti. Aliquam erat volutpat.
+            </p>
+
+            <!-- Lista -->
+            <ul class="list-unstyled ps-3">
+              <li><span class="text-warning">★</span> um texto lorem aqui;</li>
+              <li><span class="text-warning">★</span> um texto lorem aqui;</li>
+              <li><span class="text-warning">★</span> um texto lorem aqui;</li>
+            </ul>
+
+            <!-- Parágrafo 3 -->
+            <p>
+              Finalizando esta seção, é importante <strong class="text-info">manter o foco</strong> no conteúdo apresentado,
+              pois ele será fundamental para os próximos tópicos.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in lacus vitae elit tincidunt hendrerit.
+              Vivamus eget ex nec mi scelerisque fermentum. Sed in libero dignissim, iaculis leo non, dapibus felis.
+              Suspendisse potenti. Aliquam erat volutpat.
+            </p>
+
+            <!-- Título 2 -->
+            <h2 class="text-success mt-5 mb-4">Título 2</h2>
+
+            <!-- Parágrafo 1 -->
+            <p>
+              Continuando, agora entramos em uma nova etapa do aprendizado, com mais <strong class="text-warning">exemplos
+              práticos</strong> e interações.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus augue nec magna convallis, sed vestibulum nunc fermentum.
+              Aenean tempor sapien sed neque congue vehicula. Cras varius nulla sed eros ultricies, sed eleifend sem tristique.
+              Suspendisse eu lectus a tellus accumsan commodo. Integer nec augue sed arcu efficitur lobortis.
+              Sed posuere dui ut nisi ultrices, a faucibus diam laoreet. Donec volutpat tellus vel nisi feugiat, nec facilisis odio sagittis.
+              Etiam blandit eros nec justo dignissim, nec vehicula sem egestas.
+            </p>
+
+            <!-- Lista -->
+            <ul class="list-unstyled ps-3">
+              <li><span class="text-danger">✔</span> um texto lorem aqui;</li>
+              <li><span class="text-danger">✔</span> um texto lorem aqui;</li>
+              <li><span class="text-danger">✔</span> um texto lorem aqui;</li>
+            </ul>
+
+            <!-- Parágrafo 2 -->
+            <p>
+              Esses tópicos são <strong class="text-primary">essenciais</strong> para o entendimento global da aula, portanto,
+              revise-os com atenção.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in lacus vitae elit tincidunt hendrerit.
+              Vivamus eget ex nec mi scelerisque fermentum. Sed in libero dignissim, iaculis leo non, dapibus felis.
+              Suspendisse potenti. Aliquam erat volutpat.
+            </p>
+
+            <!-- Parágrafo 3 -->
+            <p>
+              Ao final deste módulo, você terá uma <strong class="text-success">base sólida</strong> para avançar nos
+              conteúdos seguintes do curso.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus augue nec magna convallis, sed vestibulum nunc fermentum.
+              Aenean tempor sapien sed neque congue vehicula. Cras varius nulla sed eros ultricies, sed eleifend sem tristique.
+              Suspendisse eu lectus a tellus accumsan commodo. Integer nec augue sed arcu efficitur lobortis.
+              Sed posuere dui ut nisi ultrices, a faucibus diam laoreet. Donec volutpat tellus vel nisi feugiat, nec facilisis odio sagittis.
+              Etiam blandit eros nec justo dignissim, nec vehicula sem egestas.
+            </p>
+            <!-- Título 3 -->
+            <h2 class="text-success mt-5 mb-4">Título 3</h2>
+
+            <!-- Parágrafo 1 -->
+            <p>
+              Continuando, agora entramos em uma nova etapa do aprendizado, com mais <strong class="text-warning">exemplos
+              práticos</strong> e interações.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus augue nec magna convallis, sed vestibulum nunc fermentum.
+              Aenean tempor sapien sed neque congue vehicula. Cras varius nulla sed eros ultricies, sed eleifend sem tristique.
+              Suspendisse eu lectus a tellus accumsan commodo. Integer nec augue sed arcu efficitur lobortis.
+              Sed posuere dui ut nisi ultrices, a faucibus diam laoreet. Donec volutpat tellus vel nisi feugiat, nec facilisis odio sagittis.
+              Etiam blandit eros nec justo dignissim, nec vehicula sem egestas.
+            </p>
+
+            <!-- Lista -->
+            <ul class="list-unstyled ps-3">
+              <li><span class="text-danger">✔</span> um texto lorem aqui;</li>
+              <li><span class="text-danger">✔</span> um texto lorem aqui;</li>
+              <li><span class="text-danger">✔</span> um texto lorem aqui;</li>
+            </ul>
+
+            <!-- Parágrafo 2 -->
+            <p>
+              Esses tópicos são <strong class="text-primary">essenciais</strong> para o entendimento global da aula, portanto,
+              revise-os com atenção.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in lacus vitae elit tincidunt hendrerit.
+              Vivamus eget ex nec mi scelerisque fermentum. Sed in libero dignissim, iaculis leo non, dapibus felis.
+              Suspendisse potenti. Aliquam erat volutpat.
+            </p>
+
+            <!-- Parágrafo 3 -->
+            <p>
+              Ao final deste módulo, você terá uma <strong class="text-success">base sólida</strong> para avançar nos
+              conteúdos seguintes do curso.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus augue nec magna convallis, sed vestibulum nunc fermentum.
+              Aenean tempor sapien sed neque congue vehicula. Cras varius nulla sed eros ultricies, sed eleifend sem tristique.
+              Suspendisse eu lectus a tellus accumsan commodo. Integer nec augue sed arcu efficitur lobortis.
+              Sed posuere dui ut nisi ultrices, a faucibus diam laoreet. Donec volutpat tellus vel nisi feugiat, nec facilisis odio sagittis.
+              Etiam blandit eros nec justo dignissim, nec vehicula sem egestas.
+            </p>
+          </div>
+
+        </section>
+      </div>
+      <div class="tab-pane fade" id="aula2" role="tabpanel">
+        <h4>Aula 2: Configuração do Ambiente</h4>
+        <p>Configuração básica para desenvolvimento: editores, terminal, Git e versionamento.</p>
+      </div>
+      <div class="tab-pane fade" id="aula3" role="tabpanel">
+        <h4>Aula 3: Estrutura do Projeto</h4>
+        <p>Entenda como montar a estrutura inicial do projeto, organizar os arquivos e boas práticas.</p>
+      </div>
+      <div class="tab-pane fade" id="aula4" role="tabpanel">
+        <h4>Aula 4: Layouts Responsivos</h4>
+        <p>Utilização do Bootstrap para criar layouts que funcionam bem em qualquer dispositivo.</p>
+      </div>
+      <div class="tab-pane fade" id="aula5" role="tabpanel">
+        <h4>Aula 5: Componentes Reutilizáveis</h4>
+        <p>Como criar e aplicar componentes reutilizáveis para acelerar o desenvolvimento.</p>
+      </div>
+      <div class="tab-pane fade" id="aula6" role="tabpanel">
+        <h4>Aula 6: Consumo de APIs</h4>
+        <p>Aprenda como integrar o frontend com APIs REST para buscar e exibir dados.</p>
+      </div>
+      <div class="tab-pane fade" id="aula7" role="tabpanel">
+        <h4>Aula 7: Deploy</h4>
+        <p>Descubra como fazer o deploy do seu projeto utilizando serviços como Vercel, Netlify ou Firebase.</p>
+      </div>
+      <div class="tab-pane fade" id="aula8" role="tabpanel">
+        <h4>Aula 8: Conclusão e próximos passos</h4>
+        <p>Resumo do curso, boas práticas, dicas e próximos caminhos para continuar estudando.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="container-fluid py-5 faq-section">
+  <div class="faq-wrapper">
+    <h2 class="mb-4 pt-5">Perguntas Frequentes</h2>
+
+    <div class="accordion pb-5" id="faqAccordion">
+
+      <!-- FAQ 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading0">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse0" aria-expanded="false" aria-controls="collapse0">
+            01. Como recebo monitoria para este curso?
+          </button>
+        </h2>
+        <div id="collapse0" class="accordion-collapse collapse" aria-labelledby="heading0"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Para <span class="highlight-primary">criar sua conta</span>, clique no botão "Registrar" no topo da página.
+            Em seguida, preencha seus <span class="highlight-secondary">dados pessoais</span> e escolha uma senha segura.
+            Um <span class="highlight-success">e-mail de confirmação</span> será enviado para o endereço fornecido.
+            Após confirmar, você terá <span class="highlight-warning">acesso completo</span> à plataforma.
+            Certifique-se de aceitar os <span class="highlight-danger">termos de uso</span> antes de finalizar.
+            Todo o processo leva menos de 2 minutos.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+            02. Vou receber um feedback sobre as minhas respostas dos questionários?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Vá até a tela de <span class="highlight-primary">login</span> e clique em "Esqueci minha senha".
+            Informe o seu <span class="highlight-secondary">e-mail cadastrado</span> e aguarde o link de redefinição.
+            Verifique sua <span class="highlight-success">caixa de entrada</span> e também o spam.
+            Siga as instruções para <span class="highlight-warning">criar uma nova senha</span> segura.
+            Recomendamos usar uma combinação de <span class="highlight-danger">letras, números e símbolos</span>.
+            Se tiver problemas, contate o <span class="highlight-primary">suporte técnico</span>.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            03. Qual é o prazo para entrega dos desafios?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sim! Acesse seu <span class="highlight-success">perfil</span> e clique na aba "Meus dados".
+            Lá, você pode atualizar seu <span class="highlight-secondary">nome, e-mail e telefone</span>.
+            É importante manter essas informações <span class="highlight-warning">sempre atualizadas</span>.
+            Algumas informações como <span class="highlight-danger">documentos</span> podem requerer verificação adicional.
+            Após salvar, as mudanças são <span class="highlight-primary">efetivadas imediatamente</span>.
+            Em caso de dúvida, consulte a seção de <span class="highlight-secondary">ajuda</span>.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            04. Por onde consigo enviar uma dúvida/sugestão/elogio sobre este curso?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            O site funciona nos principais <span class="highlight-success">navegadores modernos</span>:
+            Chrome, Firefox, Edge e Safari.
+            É recomendado manter o <span class="highlight-primary">navegador atualizado</span> para melhor performance.
+            Evite o uso de <span class="highlight-danger">versões antigas</span>, pois podem comprometer funcionalidades.
+            Se notar lentidão, tente limpar o <span class="highlight-warning">cache</span>.
+            Para melhor experiência, habilite <span class="highlight-secondary">JavaScript e Cookies</span>.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            05. Serei comunicado sobre as agendas presenciais do curso?
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Você pode falar conosco pelo <span class="highlight-primary">chat ao vivo</span> ou pelo e-mail <span class="highlight-success">suporte@site.com</span>.
+            O atendimento está disponível de <span class="highlight-secondary">segunda a sexta</span>, das 9h às 18h.
+            Para dúvidas urgentes, use o <span class="highlight-warning">telefone disponível</span> na página de contato.
+            Tenha em mãos seu <span class="highlight-danger">número de registro</span> para agilizar o atendimento.
+            Estamos aqui para <span class="highlight-success">te ajudar</span> da melhor forma possível.
+            Feedbacks também são bem-vindos!
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/interfaces/user';
+import { UserLogin } from 'src/app/interfaces/userLogin';
 import { AuthService } from 'src/app/services/auth.service';
 import { Subject, takeUntil } from 'rxjs';
 import { Router } from '@angular/router';
@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit{
-  user: User = {
+  user: UserLogin = {
     email: '',
-    password: ''
+    senha: ''
 };
 valCheck: string[] = ['remember'];
 private readonly destroy$: Subject<void> = new Subject();
@@ -32,7 +32,7 @@ ngOnInit() : void{
 
 onLogin() : void {
 
-      this.authService.login(this.user.email, this.user.password)
+      this.authService.login(this.user.email, this.user.senha)
       .pipe(
         takeUntil(this.destroy$) //para se desinscrever e evitar vazamento de memoria
       )

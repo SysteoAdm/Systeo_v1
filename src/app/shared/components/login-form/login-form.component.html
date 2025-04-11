@@ -1,7 +1,7 @@
 <div class="container d-flex justify-content-center align-items-center cont-form">
     <div class="row w-100">
       <div class="col-12 col-md-6 col-lg-4 mx-auto">
-        <div class="card shadow-lg p-4" style="background-color: #444;">
+        <div class="card shadow-lg p-4" style="background: linear-gradient(135deg, #001F70, #0038a8, #0052cc);">
           <h2 class="text-center text-white mb-4">Entrar</h2>
           <form>
             <!-- Email -->
@@ -12,10 +12,10 @@
             <!-- Senha -->
             <div class="mb-3">
               <label for="password" class="form-label text-white">Senha</label>
-              <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}">
+              <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required [(ngModel)]="user.senha" [ngModelOptions]="{standalone: true}">
             </div>
             <!-- Botão de login -->
-            <button type="submit" class="btn btn-primary w-100" (click)="onLogin()">Entrar</button>
+            <button type="submit" class="btn btn-primary w-100 btn-entrar" (click)="onLogin()">Entrar</button>
           </form>
           <p class="text-center text-white mt-3">Não tem uma conta? <a href="#" class="text-primary" [routerLink]="['/Criar-Novo-Usuario']">Criar uma conta</a></p>
         </div>

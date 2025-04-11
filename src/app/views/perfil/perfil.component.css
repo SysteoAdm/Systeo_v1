@@ -1,47 +1,56 @@
-.profile-card {
-  max-width: 600px;
-  background-color: #EDEDED;
-  border-radius: 12px;
-  border: none;
-  padding: 20px;
-}
+body {
+  background: linear-gradient(90deg, #1a1a2e, #16213e);
+ }
 
-.profile-img {
-  border: 3px solid #002FA6;
-  padding: 3px;
-}
+ .profile-card {
+   max-width: 1200px;
+   background: linear-gradient(135deg, #001F70, #0038a8, #0052cc);
+   border-radius: 0px;
+   border: none;
+   padding: 20px;
+ }
 
-.profile-upload {
-  background-color: #f8f9fa;
-  border-radius: 6px;
-  border: 1px solid #ced4da;
-}
+ .profile-img {
+   border: 3px solid #002FA6;
+   padding: 3px;
+ }
 
-.form-control {
-  border-radius: 6px;
-  border: 1px solid #ced4da;
-  transition: 0.3s;
-}
+ .profile-upload {
+   background-color: #f8f9fa;
+   border-radius: 6px;
+   border: 1px solid #ced4da;
+ }
 
-.form-control:focus {
-  border-color: #002FA6;
-  box-shadow: 0 0 5px rgba(0, 47, 166, 0.5);
-}
+ .form-control {
+   border-radius: 6px;
+   border: 1px solid #fefeff;
+   transition: 0.3s;
+ }
 
-.save-btn {
-  background-color: #002FA6;
-  border: none;
-}
+ .form-control:focus {
+   border-color: #f2f6f8;
+   border: 3px solid #00bfff;
+   box-shadow: 0 0 5px #f6f8f9;
+ }
 
-.save-btn:hover {
-  background-color: #001F70;
-}
+ .save-btn {
+   background-color: #00bfff;
+   border: none;
+   max-width: 550px;
+ }
 
-.password-btn {
-  background-color: #A60000;
-  border: none;
-}
+ .save-btn:hover {
+   font-weight: 500;
+   background-color: #04477e;
+ }
 
-.password-btn:hover {
-  background-color: #700000;
-}
+ .password-btn {
+   background-color: #A60000;
+   border: none;
+   max-width: 350px;
+ }
+
+ .password-btn:hover {
+   font-weight: 500;
+   background-color: #700000;
+ }

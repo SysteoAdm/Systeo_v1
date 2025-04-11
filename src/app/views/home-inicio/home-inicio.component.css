@@ -1,0 +1,118 @@
+
+/* ====================mock banner============================== */
+
+.section-curso {
+  background: linear-gradient(to right, #000010, #08001e);
+  background-image: url('src/assets/backsadjsadhiasdhuahu1.webp');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* ou 'scroll' se preferir */
+  position: relative;
+  /* color: white; */
+}
+
+.title-main {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.title-sub {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #bca9ff, #6c63ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.descricao {
+  font-size: 1.1rem;
+  color: #d0ccff;
+  margin-top: 1rem;
+}
+
+.info-box i {
+  font-size: 1.6rem;
+  color: #bca9ff;
+  margin-bottom: 0.5rem;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.cta-btn {
+  background-color: #00ffc3;
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ffc3;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #00bfa6;
+  color: white;
+}
+
+.img-frame {
+  border: 3px solid #8b66ff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #8b66ff;
+  max-width: 400px;
+}
+
+/* =====================cards: */
+
+.section-cards {
+  background-color: #0d0d0d; /* preto executivo */
+}
+
+/* NOVO: layout com grid responsivo e espaçamento uniforme */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px; /* define o espaço horizontal e vertical entre os cards */
+  justify-content: center; /* centraliza os cards horizontalmente */
+  padding: 0 12px; /* margem dos lados do container */
+}
+
+.custom-card {
+  width: 210px;
+  height: 210px;
+  background: linear-gradient(145deg, #0a0a23, #0f0f2e);
+  border: 2px solid #112244;
+  border-radius: 10px;
+  padding: 20px;
+  color: #ccc;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-card .icon i {
+  font-size: 2rem;
+  color: #00bfff; /* deep sky blue */
+}
+
+.custom-card .card-title {
+  color: #00bfff;
+  font-weight: bold;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  border-color: #00bfff;
+}

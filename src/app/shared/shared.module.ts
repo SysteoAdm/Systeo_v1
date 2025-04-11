@@ -22,6 +22,12 @@ import { SliderCursosImg02Component } from './components/slider-cursos-img02/sli
 import { SliderCursosImg03Component } from './components/slider-cursos-img03/slider-cursos-img03.component';
 import { SliderCursosImg04Component } from './components/slider-cursos-img04/slider-cursos-img04.component';
 import { SliderCursosImg05Component } from './components/slider-cursos-img05/slider-cursos-img05.component';
+import { ListagemUsuariosComponent } from './components/listagem-usuarios/listagem-usuarios.component';
+import { AlocaCursosComponent } from './components/aloca-cursos/aloca-cursos.component';
+import { SlideCursoAdolescentesComponent } from './components/slide-curso-adolescentes/slide-curso-adolescentes.component';
+import { SlideCursoADoutrinaDoEspiritoSantoComponent } from './components/slide-curso-a-doutrina-do-espirito-santo/slide-curso-a-doutrina-do-espirito-santo.component';
+import { MenuTopLandingComponent } from './components/templates/menu-top-landing/menu-top-landing.component';
+import { FooterLandingComponent } from './components/templates/footer-landing/footer-landing.component';
 
 
 
@@ -45,13 +51,20 @@ import { SliderCursosImg05Component } from './components/slider-cursos-img05/sli
     SliderCursosImg02Component,
     SliderCursosImg03Component,
     SliderCursosImg04Component,
-    SliderCursosImg05Component
+    SliderCursosImg05Component,
+    ListagemUsuariosComponent,
+    AlocaCursosComponent,
+    SlideCursoAdolescentesComponent,
+    SlideCursoADoutrinaDoEspiritoSantoComponent,
+    MenuTopLandingComponent,
+    FooterLandingComponent,
+
   ],
   imports: [
     CommonModule,
     SharedRoutingModule,
     FormsModule,
-    
+
   ],
   exports: [
     SharedComponent,
@@ -72,7 +85,14 @@ import { SliderCursosImg05Component } from './components/slider-cursos-img05/sli
     SliderCursosImg02Component,
     SliderCursosImg03Component,
     SliderCursosImg04Component,
-    SliderCursosImg05Component
+    SliderCursosImg05Component,
+    ListagemUsuariosComponent,
+    AlocaCursosComponent,
+    SlideCursoAdolescentesComponent,
+    SlideCursoADoutrinaDoEspiritoSantoComponent,
+    MenuTopLandingComponent,
+    FooterLandingComponent,
+
   ]
 })
 export class SharedModule { }

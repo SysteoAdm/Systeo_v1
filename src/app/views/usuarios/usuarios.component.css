@@ -1,5 +1,26 @@
-/* usuarios.component.css */
-.nome-online {
-  color: green;
-  font-weight: bold;
+
+/* ==================== TABS =====================: */
+
+.tabs button {
+  margin-right: 2px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
 }
+
+.tabs button:hover{
+  background-color: rgb(221, 250, 255);
+}
+
+.tabs button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.tab-content {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+

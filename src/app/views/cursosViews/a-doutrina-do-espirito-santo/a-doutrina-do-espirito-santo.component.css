@@ -1,0 +1,154 @@
+/* Estilo do slider */
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.clickable-image {
+  width: 341px;
+  height: 192px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.clickable-image:hover {
+  transform: scale(1.05);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.container-fluid .cont-initial {
+  background: linear-gradient(to left, #EDEDED, white 50%, #EDEDED);
+}
+
+.link-title {
+  color: #3c3c3c;
+  text-decoration: none;
+}
+
+.link-title:hover {
+  cursor: pointer;
+  color: var(--azul-intenso);
+}
+
+/* ========================== Estilo do Modal ========================== */
+
+/* Cabeçalho do modal */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #09437e;
+  color: white;
+  padding: 1rem;
+}
+
+.modal-dialog {
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+.modal-backdrop {
+  z-index: 1000 !important;
+  background-color: rgba(32, 8, 89, 0.9);
+}
+
+/* INCLUSÃO: Para garantir opacidade correta ao fundo */
+.modal-backdrop.show {
+  opacity: 0.95;
+}
+
+.modal {
+  z-index: 1060 !important;
+}
+
+.modal-content {
+  background-color: #343a40;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+
+.modal-footer {
+  padding-top: 10px;
+}
+
+/* Estilos para o vídeo */
+.modal-body {
+  padding: 0;
+  flex-grow: 1;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+
+  /* INCLUSÃO: opcional para bordas arredondadas no vídeo */
+  border-radius: 0 0 10px 10px;
+}
+
+/* Ícone de fechar */
+.bi-x {
+  color: white;
+  font-size: 30px;
+}
+
+.modal-body h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-body p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #dcdcdc;
+}
+
+/* Botão de fechar (inclusão compatível com Bootstrap) */
+.modal-header .btn-close {
+  filter: invert(1);
+  opacity: 1;
+  background-color: transparent;
+  border: none;
+}
+
+/* INCLUSÃO: Estilo do botão "Assistir aqui" */
+.watch-modal-button {
+  background-color: var(--azul-intenso);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.watch-modal-button:hover {
+  background-color: #0d47a1;
+}
+
+/* ========================== Ajustes Responsivos ========================== */
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 95%;
+  }
+
+  iframe {
+    height: 60vh;
+  }
+
+  .modal-header {
+    padding: 0.5rem;
+  }
+}
