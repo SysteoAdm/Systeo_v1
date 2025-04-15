@@ -40,6 +40,7 @@ onLogin() : void {
         next : (response) => {
    
           this.authService.setToken(response.token);
+          this.authService.setUser(response.user.email);
           console.log('login realizado')
           this.router.navigate(['/home'])
         },
