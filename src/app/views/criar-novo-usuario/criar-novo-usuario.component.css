@@ -1,55 +1,40 @@
 body {
- background: linear-gradient(90deg, #1a1a2e, #16213e);
+  background: linear-gradient(90deg, #1b2735, #090a0f);
+  color: #fff;
+}
+
+.card{
+  max-width: 800px;
 }
 
 .profile-card {
-  max-width: 1200px;
-  background: linear-gradient(135deg, #001F70, #0038a8, #0052cc);
-  border-radius: 0px;
-  border: none;
-  padding: 20px;
+  background-color: #2e3a59;
+  border-radius: 15px;
 }
 
-.profile-img {
-  border: 3px solid #002FA6;
-  padding: 3px;
+/* Inputs e selects mais compactos */
+.form-control,
+.form-select {
+  height: auto;
+  padding: 6px 10px; /* reduzido */
+  font-size: 14px;   /* ligeiramente menor */
+  line-height: 1.2;  /* mais compacto */
 }
 
-.profile-upload {
-  background-color: #f8f9fa;
-  border-radius: 6px;
-  border: 1px solid #ced4da;
+/* Espaçamento entre campos do formulário reduzido */
+.form-group-custom {
+  margin-bottom: 1px; /* antes era 20px */
 }
 
-.form-control {
-  border-radius: 6px;
-  border: 1px solid #fefeff;
-  transition: 0.3s;
-}
-
-.form-control:focus {
-  border-color: #f2f6f8;
-  border: 3px solid #00bfff;
-  box-shadow: 0 0 5px #f6f8f9;
-}
-
+/* Botão Salvar com leve redução opcional */
 .save-btn {
-  background-color: #00bfff;
-  border: none;
-  max-width: 550px;
+  padding: 8px 20px;   /* um pouco mais compacto */
+  font-size: 15px;     /* menor que 16px */
 }
 
-.save-btn:hover {
-  font-weight: 500;
-  background-color: #04477e;
-}
 
-.password-btn {
-  background-color: #A60000;
-  border: none;
-}
-
-.password-btn:hover {
-  font-weight: 500;
-  background-color: #700000;
+label {
+  font-size: 12px; /* ou 13px para ainda mais compactação */
+  margin-bottom: 4px; /* reduz o espaço entre label e input */
+  display: block; /* garante o espaçamento correto acima do input */
 }

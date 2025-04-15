@@ -1,60 +1,62 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-home-inicio',
-  templateUrl: './home-inicio.component.html',
-  styleUrls: ['./home-inicio.component.css']
+  selector: 'app-chamados-a-lideranca',
+  templateUrl: './chamados-a-lideranca.component.html',
+  styleUrls: ['./chamados-a-lideranca.component.css']
 })
-export class HomeInicioComponent {
+export class ChamadosALiderancaComponent {
+  returnRoute = '/adolescentes'; // Define a rota de retorno
+
   cards = [
     {
       icon: 'bi bi-lightning-fill',
-      title: 'Bíblia',
-      description: 'Estudos do Novo Testamento.'
+      title: 'Aula 1',
+      description: 'Processos otimizados para resultados rápidos.'
     },
     {
       icon: 'bi bi-cpu-fill',
-      title: 'Bíblia',
-      description: 'Estudos do Velho Testamento.'
+      title: 'Aula 2',
+      description: 'Infraestrutura moderna e eficiente.'
     },
     {
       icon: 'bi bi-people-fill',
-      title: 'Casais',
-      description: 'Casados Pra Sempre.'
+      title: 'Aula 3',
+      description: 'Trabalho em equipe com alto desempenho.'
     },
     {
       icon: 'bi bi-globe2',
-      title: 'Liderança',
+      title: 'Aula 4',
       description: 'Acesso rápido e global às soluções.'
     },
     {
       icon: 'bi bi-award-fill',
-      title: 'Apologética',
+      title: 'Aula 5',
       description: 'Padrões elevados de entrega e suporte.'
     },
     {
       icon: 'bi bi-lightbulb-fill',
-      title: 'Teologia',
+      title: 'Aula 6',
       description: 'Criatividade aplicada à resolução de problemas.'
     },
     {
       icon: 'bi bi-shield-lock-fill',
-      title: 'Música',
+      title: 'Aula 7',
       description: 'Proteção e confiabilidade em todos os níveis.'
     },
     {
       icon: 'bi bi-shield-lock-fill',
-      title: 'Hermenêutica',
+      title: 'Aula 8',
       description: 'Proteção e confiabilidade em todos os níveis.'
     },
     {
       icon: 'bi bi-shield-lock-fill',
-      title: 'Fé Cristã',
+      title: 'Aula 9',
       description: 'Proteção e confiabilidade em todos os níveis.'
     },
     {
       icon: 'bi bi-shield-lock-fill',
-      title: 'Jovens',
+      title: 'Aula 10',
       description: 'Proteção e confiabilidade em todos os níveis.'
     }
   ];

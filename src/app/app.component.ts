@@ -29,7 +29,7 @@ export class AppComponent {
     //Footer Principal
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        // Rotas onde a navbar NÃO deve aparecer
+        // Rotas onde o footer NÃO deve aparecer
         const noNavbarRoutes = ['/LoginPage', '/Criar-Novo-Usuario','/homeEscolaDigital'];
 
         this.showFooter = !noNavbarRoutes.includes(event.urlAfterRedirects);

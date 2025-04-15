@@ -46,6 +46,11 @@ const routes: Routes = [
 
   { path: 'AV-Adolescentes', loadChildren: () => import('./views/avaliacoesViews/av-adolescentes/av-adolescentes.module').then(m => m.AVAdolescentesModule) },
   { path: 'MinhasAvalicacoes', loadChildren: () => import('./views/avaliacoesViews/minhas-avalicacoes/minhas-avalicacoes.module').then(m => m.MinhasAvalicacoesModule) },
+  { path: 'pre-doutrina', loadChildren: () => import('./views/cursosViews/a-doutrina-do-espirito-santo/preCursoView/pre-doutrina/pre-doutrina.module').then(m => m.PreDoutrinaModule) },
+  { path: 'Chamados-A-Liderança', loadChildren: () => import('./views/cursosViews/chamados-a-lideranca/chamados-a-lideranca.module').then(m => m.ChamadosALiderancaModule) },
+  { path: 'pre-liderança', loadChildren: () => import('./views/cursosViews/chamados-a-lideranca/preCursoView/pre-lideranca/pre-lideranca.module')
+      .then(m => m.PreLiderancaModule)
+  },
 
   // Rota curinga para redirecionar qualquer rota inexistente para a home
   { path: '**', redirectTo: '/homeEscolaDigital' }

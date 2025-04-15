@@ -5,6 +5,7 @@ import { CriarNovoUsuarioRoutingModule } from './criar-novo-usuario-routing.modu
 import { CriarNovoUsuarioComponent } from './criar-novo-usuario.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     CriarNovoUsuarioRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CriarNovoUsuarioModule { }

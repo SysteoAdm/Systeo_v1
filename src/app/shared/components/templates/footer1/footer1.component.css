@@ -1,19 +1,19 @@
 footer {
-    background-color: #002FA6;
+    background-color: #184472;
   }
-  
+
   footer a:hover {
     text-decoration: underline;
   }
-  
+
   footer .list-unstyled {
     padding-left: 0;
   }
-  
+
   footer .bi {
     transition: transform 0.3s ease;
   }
-  
+
   footer .bi:hover {
     transform: scale(1.2);
   }

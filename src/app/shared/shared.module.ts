@@ -28,6 +28,7 @@ import { SlideCursoAdolescentesComponent } from './components/slide-curso-adoles
 import { SlideCursoADoutrinaDoEspiritoSantoComponent } from './components/slide-curso-a-doutrina-do-espirito-santo/slide-curso-a-doutrina-do-espirito-santo.component';
 import { MenuTopLandingComponent } from './components/templates/menu-top-landing/menu-top-landing.component';
 import { FooterLandingComponent } from './components/templates/footer-landing/footer-landing.component';
+import { SlideCursoChamadosLiderancaComponent } from './components/slide-curso-chamados-lideranca/slide-curso-chamados-lideranca.component';
 
 
 
@@ -58,6 +59,7 @@ import { FooterLandingComponent } from './components/templates/footer-landing/fo
     SlideCursoADoutrinaDoEspiritoSantoComponent,
     MenuTopLandingComponent,
     FooterLandingComponent,
+    SlideCursoChamadosLiderancaComponent,
 
   ],
   imports: [
@@ -92,6 +94,7 @@ import { FooterLandingComponent } from './components/templates/footer-landing/fo
     SlideCursoADoutrinaDoEspiritoSantoComponent,
     MenuTopLandingComponent,
     FooterLandingComponent,
+    SlideCursoChamadosLiderancaComponent,
 
   ]
 })
