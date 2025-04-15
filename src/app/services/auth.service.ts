@@ -16,8 +16,8 @@ export class AuthService {
     return this.http.post(environment.apiUrl + '/user/register', usuario);
   }
 
-  login(email: string, password: string): Observable<any> {
-    return this.http.post(environment.apiUrl + '/user/login', { email, password });
+  login(email: string, senha: string): Observable<any> {
+    return this.http.post(environment.apiUrl + '/user/login', { email, senha });
   }
 
   setToken(token: string): void {
