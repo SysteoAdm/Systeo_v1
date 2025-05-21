@@ -22,10 +22,17 @@
           <div *ngFor="let campo of group" class="col-md-6 mb-2">
             <label [for]="campo.id" class="form-label">{{ campo.label }}</label>
             <input
-              *ngIf="campo.tipo !== 'select'"
+              *ngIf="campo.tipo !== 'select' && campo.id !== 'cep'"
               [type]="campo.tipo"
               class="form-control"
               [id]="campo.id"
+              [formControlName]="campo.id" />
+            <input
+              *ngIf="campo.tipo !== 'select' && campo.id === 'cep'"
+              [type]="campo.tipo"
+              class="form-control"
+              [id]="campo.id"
+              (ngModelChange)="findCep($event)"
               [formControlName]="campo.id" />
             <select
               *ngIf="campo.tipo === 'select'"
