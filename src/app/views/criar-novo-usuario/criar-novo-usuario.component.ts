@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { CepService } from 'src/app/services/cep.service';
 
 @Component({
   selector: 'app-criar-novo-usuario',
@@ -73,10 +74,12 @@ export class CriarNovoUsuarioComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
+    private cepService: CepService,
     private router: Router
   ) {}
 
   ngOnInit(): void {
+    this.findCep('22780-085')
     this.usuarioForm = this.fb.group({
       nome: ['', Validators.required],
       cpf: [''],
@@ -121,6 +124,32 @@ export class CriarNovoUsuarioComponent implements OnInit {
         }
       });
     });
+  }
+
+  findCep(cep : string) : void {
+    this.cepService.find(cep)
+    .subscribe({
+        next : (response : any) => {
+    //     {
+    //   "cep": "22770-110",
+    //   "logradouro": "Rua Samuel das Neves",
+    //   "complemento": "",
+    //   "unidade": "",
+    //   "bairro": "Pechincha",
+    //   "localidade": "Rio de Janeiro",
+    //   "uf": "RJ",
+    //   "estado": "Rio de Janeiro",
+    //   "regiao": "Sudeste",
+    //   "ibge": "3304557",
+    //   "gia": "",
+    //   "ddd": "21",
+    //   "siafi": "6001"
+    // }
+        //preencher os dados do formulario (rua,cidade,etc...)  
+          console.log(response)
+        },
+      
+      })
   }
 
   onRegister(): void {
