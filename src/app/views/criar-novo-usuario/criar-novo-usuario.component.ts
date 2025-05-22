@@ -36,14 +36,16 @@ export class CriarNovoUsuarioComponent implements OnInit {
     ],
     [
       { id: 'cpf', label: 'CPF', tipo: 'text' },
+      { id: 'cep', label: 'CEP', tipo: 'text' },
       { id: 'rua', label: 'Rua', tipo: 'text' }
     ],
     [
+      { id: 'bairro', label: 'Bairro', tipo: 'text' },
       { id: 'cidade', label: 'Cidade', tipo: 'text' },
       { id: 'estado', label: 'Estado', tipo: 'text' }
     ],
     [
-      { id: 'cep', label: 'CEP', tipo: 'text' },
+      
       {
         id: 'cristao', label: 'Você é cristão?', tipo: 'select',
         placeholder: 'Selecione', opcoes: ['sim', 'nao']
@@ -60,7 +62,7 @@ export class CriarNovoUsuarioComponent implements OnInit {
         id: 'eBatizado', label: 'É batizado?', tipo: 'select',
         placeholder: 'Selecione', opcoes: ['sim', 'nao']
       },
-      { id: 'bairro', label: 'Bairro', tipo: 'text' }
+      
     ]
   ];
 
@@ -79,7 +81,8 @@ export class CriarNovoUsuarioComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.findCep('22780-085')
+
+  
     this.usuarioForm = this.fb.group({
       nome: ['', Validators.required],
       cpf: [''],
@@ -127,28 +130,23 @@ export class CriarNovoUsuarioComponent implements OnInit {
   }
 
   findCep(cep : string) : void {
+    const cepNumerico = cep.replace(/\D/g, '');
+    if (cepNumerico.length !== 8) {
+      return;
+    }
     this.cepService.find(cep)
     .subscribe({
         next : (response : any) => {
-    //     {
-    //   "cep": "22770-110",
-    //   "logradouro": "Rua Samuel das Neves",
-    //   "complemento": "",
-    //   "unidade": "",
-    //   "bairro": "Pechincha",
-    //   "localidade": "Rio de Janeiro",
-    //   "uf": "RJ",
-    //   "estado": "Rio de Janeiro",
-    //   "regiao": "Sudeste",
-    //   "ibge": "3304557",
-    //   "gia": "",
-    //   "ddd": "21",
-    //   "siafi": "6001"
-    // }
-        //preencher os dados do formulario (rua,cidade,etc...)  
-          console.log(response)
+          this.usuarioForm.patchValue({
+            rua: response.logradouro,
+            bairro: response.bairro,
+            cidade: response.localidade,
+            estado: response.uf
+          });
         },
-      
+        error: () => {
+          console.error('Erro ao buscar o CEP');
+        }
       })
   }
 
